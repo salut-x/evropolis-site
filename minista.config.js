@@ -73,7 +73,7 @@ export default defineConfig(({ command, isSsrBuild }) => {
 					{
 						name: 'removeAttrs',
 						params: {
-							attrs: ['fill', 'stroke', 'stroke-linejoin', 'stroke-width']
+							attrs: ['fill', 'stroke']
 						}
 					}
 				]

@@ -1,0 +1,68 @@
+.header {
+  padding-block: fluid(32, 12);
+
+  &--light {
+    color: var(--color-light);  // белый текст для ссылок меню
+
+    .header__menu-link {
+      color: var(--color-light);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  &__logo {
+    flex: 1;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+    flex: 1;
+    z-index: 100;
+
+    @include tablet {
+      @include visually-hidden;
+    }
+
+    &-list {
+      display: flex;
+      text-transform: uppercase;
+      column-gap: fluid-to-laptop(24, 16);
+    }
+  }
+
+  &__menu-button {
+    z-index: 100;
+    @include tablet-above {
+      display: none;
+    }
+  }
+  &__compact-mask {
+  position: fixed;
+  top: 32px;
+  right: 40px;
+  overflow: hidden;  // ← маска
+  z-index: 98;
+
+  @include laptop {
+    top: fluid(16, 10);
+    right: fluid(24, 10);
+  }
+}
+
+  &__compact {
+  display: flex;
+  column-gap: fluid-to-laptop(8, 4);
+}
+}
+
+
+

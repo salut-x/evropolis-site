@@ -1,0 +1,42 @@
+.button {
+  @include flex-center(true);
+  padding: fluid-to-laptop(16, 12);
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius-s);
+  letter-spacing: -0.8px;
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  user-select: none;
+  cursor: pointer;
+  column-gap: fluid-to-laptop(8,6);
+
+  .icon svg {
+    transition: transform 0.3s ease;  // ← добавь
+  }
+
+  @include hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-light);
+
+    .icon svg {
+      transform: rotate(90deg);  // ← добавь
+    }
+  }
+
+
+  &:active {
+    scale: 1.01;
+  }
+
+  &--gray {
+    background-color: var(--color-gray-10);
+    color: var(--color-dark);
+
+    @include hover {
+    background-color: var(--color-gray-20);
+    color: var(--color-dark);
+  }
+  }
+}

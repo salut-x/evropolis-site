@@ -1,0 +1,19 @@
+.icon {
+  --iconSize: 12px;
+
+  @include square(var(--iconSize));
+  display: inline-flex;
+  flex-shrink: 0;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;  // ← fill дефолт
+    stroke: none;
+  }
+
+  &--stroke svg {
+    fill: none;
+    stroke: currentColor;
+  }
+}

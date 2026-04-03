@@ -1,8 +1,10 @@
+import { Hero } from '@/sections/Hero'
+
+export const metadata = {
+	title: 'Главная'
+}
 
 export default function () {
-  return (
-    <>
-      <h1>Hello!</h1>
-    </>
-  )
+	return <Hero />
+  
 }

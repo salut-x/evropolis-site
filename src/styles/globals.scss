@@ -5,13 +5,16 @@ html {
 }
 
 body {
-  @include fluid-text(18, 14);
 
   display: flex;
   flex-direction: column;
   font-family: var(--font-family-base);
-  color: var(--color-gray-60);
-  background-color: var(--color-black-08);
+  color: var(--color-dark);
+  font-size: fluid-to-laptop(20,16);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 135%; /* 70.4px */
+  background-color: var(--color-light);
 
 }
 
@@ -27,32 +30,37 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  color: var(--color-white);
+  color: var(--color-dark);
 }
 
-h1, .h1 {
-  @include fluid-text(58, 28);
-  font-weight: 700;
-}
-h2, .h2 {
-  @include fluid-text(48, 24);
-  font-weight: 700;
-}
-h3, .h3 {
-  @include fluid-text(38, 20);
-  font-weight: 700;
-}
-h4, .h4 {
-  @include fluid-text(24, 18);
+h1, .text-2xl {
+  @include fluid-text(96, 28);
   font-weight: 600;
+  line-height: 110%; /* 105.6px */
+  letter-spacing: -0.04em;
 }
-h5, .h5 {
-  @include fluid-text(22, 18);
-  font-weight: 500;
-}
-h6, .h6 {
-  @include fluid-text(20, 16);
+h2, .text-xl {
+  @include fluid-text(64, 28);
   font-weight: 600;
+  line-height: 110%; /* 70.4px */
+  letter-spacing: -0.04em;
+}
+h3, .text-lg {
+  @include fluid-text(32, 18);
+  font-weight: 600;
+  line-height: 140%; /* 44.8px */
+  letter-spacing: -0.04em;
+}
+h4, .text-sm {
+  @include fluid-text(16, 14);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.04em;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 a,
@@ -65,10 +73,15 @@ svg * {
   transition-duration: var(--transition-duration);
 }
 
+a, button {
+  white-space: nowrap;
+}
+
 a {
   color: inherit;
+  text-decoration: none;
   @include hover {
-    color: var(--color-red-45);
+    color: var(--color-accent);
   }
 
   &[class] {
@@ -79,4 +92,17 @@ a {
   }
 }
 
+dialog {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
 
+.cta-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0 0 0 / 0.5);
+  z-index: 99;
+  visibility: hidden;
+  opacity: 0;
+}
