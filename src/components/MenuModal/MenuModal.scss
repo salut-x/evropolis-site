@@ -84,13 +84,17 @@
 
   &__menu {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     align-items: flex-end;
     align-items: start;
     column-gap: 24px;
     margin-top: auto;
     padding-inline: fluid-to-laptop(32, 24);
     margin-bottom: fluid(56, 40);
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__column {

@@ -3,13 +3,14 @@ import { Icon } from '@/components/Icon'
 import { Link } from '@/components/Link'
 import { contactsData } from '@/constants/contactsData'
 import { headerMenuItems } from '@/constants/headerData'
+import classNames from 'classnames'
 import './MenuModal.scss'
 
 const MenuDialog = ({ className }) => {
 	return (
 		<>
 			<Button
-				className={className}
+				className={classNames('menu__button', className)}
 				iconName='x-icon'
 				label='Меню'
 				mode='gray'

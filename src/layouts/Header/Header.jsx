@@ -18,7 +18,7 @@ const Header = props => {
 				<Logo
 					className='header__logo'
 					loading='eager'
-					variant={theme === 'light' ? 'white' : 'default'}
+					variant={theme === 'light' ? 'light' : 'default'}
 				/>
 				<nav className='header__menu'>
 					<ul className='header__menu-list'>

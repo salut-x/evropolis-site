@@ -1,3 +1,138 @@
 .hero {
+  position: relative;
   min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/src/assets/images/hero/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    will-change: transform;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: end;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: end;
+    color: var(--color-light);
+    padding-bottom: fluid(40, 16);
+    width: 100%;
+     gap: fluid-to-laptop(24, 16);
+
+     @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 24px;
+     }
+  }
+
+  &__title {
+    display: block;
+    max-width: fluid-to-laptop(904, 740);
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  &__title-line {
+    display: block;
+    overflow: hidden;
+  }
+
+  &__title-line-inner {
+    display: block;
+  }
+
+  &__partners {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border-radius: var(--border-radius-s);
+    padding: fluid-to-laptop(16,12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: fluid(24,10);
+    justify-self: end;
+
+    @include tablet {
+      justify-self: start;
+    }
+
+    @include mobile-s {
+      justify-content: start;
+      width: 100%;
+    }
+
+    &-item {
+      @include tablet {
+       max-height: 22px;
+        width: auto;
+      }
+
+      @include mobile-s {
+        max-height: 16px;
+      }
+    }
+    &-descriptions {
+      padding-left: fluid(24, 8);
+      max-width: fluid(164,128);
+
+      @include mobile-above {
+        border-left: var(--border);
+      }
+
+      @include mobile {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__midline {
+    @include abs-center;
+    z-index: 2;
+    display: grid;
+    row-gap: fluid-to-laptop(24, 16);
+    width: 100%;
+    color: var(--color-light);
+
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-inline: fluid-to-laptop(40, 16);
+    }
+
+    &-mask {
+      overflow: hidden;
+    }
+
+    &-line {
+      height: 1px;
+      background-color: #5E5E5E;
+      width: 100%;
+    }
+
+    @include tablet {
+      @include visually-hidden;
+    }
+  }
 }

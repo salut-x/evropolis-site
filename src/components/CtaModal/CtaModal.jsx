@@ -8,7 +8,7 @@ const CtaDialog = ({ сlassName }) => {
 			<Button
 				className={сlassName}
 				iconName='x-icon'
-				label='Обсудить проект'
+				label='Рассчитать стоимость'
 				data-js-cta-trigger
 			/>
 			<dialog
@@ -27,7 +27,7 @@ const CtaDialog = ({ сlassName }) => {
 					/>
 				</button>
 				<div className='cta-dialog__inner'>
-					<h2 className='cta-dialog__title'>Обсудить проект</h2>
+					<h2 className='cta-dialog__title'>Рассчитать стоимость</h2>
 					<p className='cta-dialog__subtitle'>
 						Оставьте контакты, и мы свяжемся с вами в ближайшее время
 					</p>

@@ -46,22 +46,25 @@ export default defineConfig(({ command, isSsrBuild }) => {
 
 			// assets.images → pluginImage
 			pluginImage({
+				useCache: true,
 				optimize: {
-					name: '[name]-[width]x[height]',
+					outName: '[name]-[width]x[height]',
 					remoteName: 'remote-[index]',
 					layout: 'constrained',
 					breakpoints: [
 						320, 400, 640, 800, 1024, 1280, 1440, 1920, 2560, 2880, 3840
 					],
-					resolution: [1, 2],
+					resolutions: [1, 2],
+					aspect: undefined,
 					format: 'inherit',
 					formatOptions: {},
 					quality: undefined,
-					aspect: undefined,
-					background: undefined,
 					fit: 'cover',
-					position: 'centre'
-				}
+					position: 'centre',
+					background: undefined
+				},
+				decoding: 'async',
+				loading: 'eager'
 			}),
 
 			// assets.svgr → pluginSvg

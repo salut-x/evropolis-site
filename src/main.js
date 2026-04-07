@@ -1,9 +1,12 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
+import AboutAnimation from './modules/AboutAnimation'
 import CtaModal from './modules/CtaModal'
 import HeaderScroll from './modules/HeaderScroll'
+import HeroAnimation from './modules/HeroAnimation'
 import MenuModal from './modules/MenuModal'
+import Preloader from './modules/Preloader'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -20,6 +23,11 @@ gsap.ticker.add(time => {
 
 gsap.ticker.lagSmoothing(0)
 
+lenis.on('scroll', ScrollTrigger.update)
+
+new Preloader()
+new HeroAnimation()
+new AboutAnimation().init()
 new CtaModal()
 new MenuModal()
 new HeaderScroll()

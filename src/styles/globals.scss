@@ -1,4 +1,5 @@
 html {
+  box-sizing: border-box;
   &.is-lock {
     overflow: hidden;
   }
@@ -15,7 +16,6 @@ body {
   letter-spacing: -0.04em;
   line-height: 135%; /* 70.4px */
   background-color: var(--color-light);
-
 }
 
 main {
@@ -30,7 +30,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  color: var(--color-dark);
+  color: inherit;
 }
 
 h1, .text-2xl {
@@ -38,24 +38,50 @@ h1, .text-2xl {
   font-weight: 600;
   line-height: 110%; /* 105.6px */
   letter-spacing: -0.04em;
+
+  @include laptop {
+
+  }
 }
 h2, .text-xl {
-  @include fluid-text(64, 28);
+  font-size: 64px;
   font-weight: 600;
   line-height: 110%; /* 70.4px */
   letter-spacing: -0.04em;
+
+  @include laptop {
+    @include fluid-text(48, 28);
+  }
 }
 h3, .text-lg {
-  @include fluid-text(32, 18);
+  font-size: fluid(32, 24);
   font-weight: 600;
   line-height: 140%; /* 44.8px */
   letter-spacing: -0.04em;
+
+  @include mobile {
+    font-size: 18px
+  }
 }
 h4, .text-sm {
   @include fluid-text(16, 14);
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.04em;
+}
+
+.text-base {
+  font-size: fluid-to-laptop(20,16);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 135%; /* 70.4px */
+}
+
+.text-sm {
+  font-size: fluid-to-laptop(16,14);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 135%; /* 70.4px */
 }
 
 p {
@@ -105,4 +131,26 @@ dialog {
   z-index: 99;
   visibility: hidden;
   opacity: 0;
+}
+
+// Section
+.section {
+  padding-block: fluid(100,40);
+
+  &__header {
+    margin-bottom: fluid(80, 16);
+    display: grid;
+    row-gap: fluid-to-laptop(16, 8)
+  }
+
+  &__title {
+    @extend .text-sm;
+    text-transform: uppercase;
+    opacity: 40%;
+  }
+
+  &__subtitle {
+    @extend .text-2xl;
+    text-transform: uppercase;
+  }
 }

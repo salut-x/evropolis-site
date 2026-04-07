@@ -17,8 +17,12 @@ class HeaderScroll {
 		// скрыт под маской — уехал вниз
 		gsap.set(this.compactElement, { y: '150%' })
 
+		if (window.scrollY > 700) {
+			gsap.set(this.compactElement, { y: '0%' })
+		}
+
 		ScrollTrigger.create({
-			start: '1000px top',
+			start: '500px top',
 			onEnter: () =>
 				gsap.to(this.compactElement, {
 					y: '0%',

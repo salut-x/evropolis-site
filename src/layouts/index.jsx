@@ -1,4 +1,6 @@
 // src/layouts/index.jsx
+import { Preloader } from '@/components/Preloader'
+import '@/components/Preloader/Preloader.scss'
 import { Content } from '@/layouts/Content'
 import { Footer } from '@/layouts/Footer'
 import { Header } from '@/layouts/Header'
@@ -47,7 +49,11 @@ export default function (props) {
 					src='src/main.js'
 				/>
 			</Head>
-			<Header url={url} theme={headerTheme}/>
+			<Preloader />
+			<Header
+				url={url}
+				theme={headerTheme}
+			/>
 			<Content>{children}</Content>
 			<Footer />
 		</>
