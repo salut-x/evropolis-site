@@ -5,20 +5,30 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default class ExpertiseScroll {
 	constructor(el) {
+		// Корневой элемент секции
 		this.el = el
+
+		// Текстовые элементы (левая колонка)
 		this.items = [...el.querySelectorAll('[data-js-expertise-item]')]
+
+		// Слайды с изображениями (правая колонка)
 		this.slides = [...el.querySelectorAll('[data-js-expertise-slide]')]
+
+		// Счётчик вида "01 / 04"
 		this.counter = el.querySelector('[data-js-expertise-counter]')
+
 		this.total = this.items.length
 		this.current = 0
 
 		if (!this.total) return
 
+		// Медиазапрос — анимация только на десктопе (> 1024px)
 		this.mq = window.matchMedia('(width > 1024px)')
 		this.mq.addEventListener('change', this.onBreakpoint)
 		this.onBreakpoint()
 	}
 
+	// Срабатывает при смене брейкпоинта
 	onBreakpoint = () => {
 		if (this.mq.matches) {
 			this.resetForTablet()
@@ -29,10 +39,13 @@ export default class ExpertiseScroll {
 		}
 	}
 
+	// Форматирует число: 1 → "01"
 	fmt(n) {
 		return String(n).padStart(2, '0')
 	}
 
+	// Сбрасывает инлайн-стили с items и slides
+	// Нужно при переключении брейкпоинта, чтобы не осталось артефактов
 	resetForTablet() {
 		this.items.forEach(item => {
 			item.style.removeProperty('visibility')
@@ -47,6 +60,7 @@ export default class ExpertiseScroll {
 		})
 	}
 
+	// Убивает все ScrollTrigger и GSAP-твины этого компонента
 	destroy() {
 		ScrollTrigger.getAll()
 			.filter(st => st.vars?.trigger === this.el || st.trigger === this.el)
@@ -57,14 +71,19 @@ export default class ExpertiseScroll {
 	}
 
 	init() {
+		// Передаём количество слайдов в CSS через кастомное свойство
 		this.el.style.setProperty('--expertise-count', this.total)
 
+		// Начальное состояние слайдов:
+		// первый открыт, остальные скрыты через clip-path сверху
 		this.slides.forEach((slide, i) => {
 			gsap.set(slide, {
 				clipPath: i === 0 ? 'inset(0% 0 0% 0)' : 'inset(100% 0 0% 0)'
 			})
 		})
 
+		// Начальное состояние items:
+		// первый видим, остальные скрыты
 		this.items.forEach((item, i) => {
 			gsap.set(item, {
 				visibility: i === 0 ? 'visible' : 'hidden',
@@ -78,9 +97,11 @@ export default class ExpertiseScroll {
 			const prevItem = this.items[i - 1]
 			const currItem = this.items[i]
 
+			// Каждый слайд занимает равную долю скролл-пути
 			const start = `top+=${(i / this.total) * 100}% top`
 			const end = `top+=${((i + 0.5) / this.total) * 100}% top`
 
+			// Анимация раскрытия слайда снизу вверх через clip-path, привязана к скроллу
 			gsap.fromTo(
 				slide,
 				{ clipPath: 'inset(100% 0 0% 0)' },
@@ -96,6 +117,7 @@ export default class ExpertiseScroll {
 				}
 			)
 
+			// Переключение текстового блока на середине анимации слайда
 			ScrollTrigger.create({
 				trigger: this.el,
 				start: `top+=${((i + 0.25) / this.total) * 100}% top`,
@@ -104,6 +126,7 @@ export default class ExpertiseScroll {
 			})
 		})
 
+		// Обновление счётчика при скролле
 		ScrollTrigger.create({
 			trigger: this.el,
 			start: 'top top',
@@ -124,6 +147,7 @@ export default class ExpertiseScroll {
 			}
 		})
 
+		// Пиннинг секции на время скролл-анимации
 		ScrollTrigger.create({
 			trigger: this.el,
 			start: 'bottom bottom',
@@ -133,25 +157,30 @@ export default class ExpertiseScroll {
 		})
 	}
 
+	// Анимация смены текстового блока:
+	// outItem — уходящий, inItem — входящий
 	showItem(index, outItem, inItem) {
+		// Скрываем уходящий блок
 		gsap.to(outItem, {
 			opacity: 0,
-			duration: 0.25,
+			duration: 0.2,
 			ease: 'power2.in',
 			onComplete: () => gsap.set(outItem, { visibility: 'hidden' })
 		})
 
 		gsap.set(inItem, { visibility: 'visible', opacity: 0 })
 
+		// Заголовок въезжает снизу вверх
 		const titleEl = inItem.querySelector('.expertise__title-inner')
 		if (titleEl) {
 			gsap.fromTo(
 				titleEl,
 				{ yPercent: 110 },
-				{ yPercent: 0, duration: 0.7, ease: 'power3.out', delay: 0.1 }
+				{ yPercent: 0, duration: 1.1, ease: 'power3.out', delay: 0.1 }
 			)
 		}
 
+		// Подзаголовок и описание появляются через opacity
 		const fadeEls = [
 			inItem.querySelector('.expertise__subtitle'),
 			inItem.querySelector('.expertise__description')
@@ -161,10 +190,11 @@ export default class ExpertiseScroll {
 			gsap.fromTo(
 				fadeEls,
 				{ opacity: 0 },
-				{ opacity: 1, duration: 0.5, ease: 'power2.out', delay: 0.2 }
+				{ opacity: 1, duration: 1.1, ease: 'power2.out', delay: 0.2 }
 			)
 		}
 
-		gsap.to(inItem, { opacity: 1, duration: 0.05, delay: 0.1 })
+		// Делаем весь блок видимым с небольшой задержкой
+		gsap.to(inItem, { opacity: 1, duration: 0.1, delay: 0.1 })
 	}
 }
