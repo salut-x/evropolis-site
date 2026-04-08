@@ -5,16 +5,36 @@
     text-align: center;
     padding-block: 120px;
 
-
     @include tablet {
       padding-block: 80px;
+      text-align: start;
     }
   }
 
-  &__grid {
+  &__slider {
+    @include tablet {
+      overflow: hidden; // swiper требует
+      margin-inline: -16px; // убираем отступы контейнера
+      padding-inline: 16px 48px; // возвращаем отступ только слева
+    }
+  }
+
+  &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: fluid(16,10);
+    gap: fluid(16, 10);
     align-items: stretch;
+
+    @include tablet {
+      display: flex; // swiper-wrapper требует flex
+    }
+  }
+
+  &__item {
+    @include tablet {
+      width: 75vw;
+      max-width: 360px;
+      height: auto;
+    }
   }
 }

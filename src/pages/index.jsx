@@ -1,4 +1,5 @@
 import { About } from '@/sections/About'
+import { CTA } from '@/sections/CTA'
 import { Expertise } from '@/sections/Expertise'
 import { Features } from '@/sections/Features'
 import { Hero } from '@/sections/Hero'
@@ -17,6 +18,7 @@ export default function () {
 			<Mission />
 			<Expertise />
 			<Features />
+			<CTA />
 		</>
 	)
 }

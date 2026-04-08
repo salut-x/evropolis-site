@@ -21,18 +21,24 @@ const Features = () => {
 				</header>
 				<div className='section__body'>
 					<div
-						className='features__grid'
+						className='features__slider swiper'
 						data-js-features
 					>
-						{FEATURES.map((item, i) => (
-							<FeaturesCard
-								key={item.id}
-								title={item.title}
-								description={item.description}
-								icon={item.icon}
-								index={i + 1}
-							/>
-						))}
+						<div className='features__list swiper-wrapper'>
+							{FEATURES.map((item, i) => (
+								<div
+									key={item.id}
+									className='features__item swiper-slide'
+								>
+									<FeaturesCard
+										title={item.title}
+										description={item.description}
+										icon={item.icon}
+										index={i + 1}
+									/>
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>

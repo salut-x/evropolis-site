@@ -11,6 +11,7 @@ import HeroAnimation from './modules/HeroAnimation'
 import MenuModal from './modules/MenuModal'
 import Preloader from './modules/Preloader'
 import TitleReveal from './modules/TitleReveal'
+
 gsap.registerPlugin(ScrollTrigger)
 
 const lenis = new Lenis({
@@ -35,27 +36,10 @@ new FadeIn().init()
 new CtaModal()
 new MenuModal()
 new HeaderScroll()
-new FeaturesAnimation().init()
+new FeaturesAnimation()
 
 document.querySelectorAll('[data-js-expertise]').forEach(el => {
 	new ExpertiseScroll(el)
 })
 
 new TitleReveal().init()
-
-/*
-// Остановить скролл
-window.lenis.stop()
-
-// Запустить скролл
-window.lenis.start()
-
-// Проскроллить к элементу
-window.lenis.scrollTo('#section', { duration: 1.5 })
-
-// Проскроллить к позиции
-window.lenis.scrollTo(500, { duration: 1 })
-
-// Проскроллить наверх
-window.lenis.scrollTo(0)
-*/
