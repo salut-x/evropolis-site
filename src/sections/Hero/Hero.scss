@@ -53,15 +53,6 @@
     flex-shrink: 1;
   }
 
-  &__title-line {
-    display: block;
-    overflow: hidden;
-  }
-
-  &__title-line-inner {
-    display: block;
-  }
-
   &__partners {
     background-color: var(--color-light);
     color: var(--color-dark);

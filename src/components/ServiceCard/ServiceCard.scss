@@ -1,0 +1,91 @@
+.service-card {
+  width: 100%;
+  overflow: hidden;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    min-height: 100vh;
+    padding-left: fluid-to-laptop(40, 24);
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      padding-inline: 16px;
+    }
+
+    @include mobile {
+      padding-inline: 10px;
+    }
+  }
+
+  &__content {
+    grid-column: span 7;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: auto;
+    padding-top: 32px;
+
+    @include tablet {
+      padding-top: 120px;
+    }
+  }
+
+  &__body {
+    padding-top: 40px;
+    padding-bottom: fluid(80, 32);
+    margin-right: fluid-to-laptop(170, 140);
+
+    @include laptop {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: fluid-to-laptop(16, 8);
+  }
+
+  &__subtitle {
+    opacity: 0.4;
+    margin-bottom: fluid-to-laptop(40, 24);
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__description {
+
+  }
+
+  &__media {
+    position: relative;
+    overflow: hidden;
+    grid-column: span 5;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      max-height: 738px;
+    }
+
+    @include mobile {
+      max-height: 396px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}

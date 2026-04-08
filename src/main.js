@@ -3,10 +3,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
 import AboutAnimation from './modules/AboutAnimation'
 import CtaModal from './modules/CtaModal'
+import FadeIn from './modules/FadeIn'
 import HeaderScroll from './modules/HeaderScroll'
 import HeroAnimation from './modules/HeroAnimation'
 import MenuModal from './modules/MenuModal'
 import Preloader from './modules/Preloader'
+import ExpertiseScroll from './modules/ExpertiseScroll'
+import TitleReveal from './modules/TitleReveal'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -28,9 +31,12 @@ lenis.on('scroll', ScrollTrigger.update)
 new Preloader()
 new HeroAnimation()
 new AboutAnimation().init()
+new TitleReveal().init()
+new FadeIn().init()
 new CtaModal()
 new MenuModal()
 new HeaderScroll()
+new ExpertiseScroll()
 
 /*
 // Остановить скролл

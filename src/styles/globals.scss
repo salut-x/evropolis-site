@@ -54,7 +54,7 @@ h2, .text-xl {
   }
 }
 h3, .text-lg {
-  font-size: fluid(32, 24);
+  font-size: fluid-to-laptop(32, 24);
   font-weight: 600;
   line-height: 140%; /* 44.8px */
   letter-spacing: -0.04em;
@@ -146,7 +146,10 @@ dialog {
   &__title {
     @extend .text-sm;
     text-transform: uppercase;
-    opacity: 40%;
+
+    > span {
+      opacity: 0.3;
+    }
   }
 
   &__subtitle {

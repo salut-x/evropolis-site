@@ -7,14 +7,14 @@ const Hero = () => {
 			<div className='hero__inner container'>
 				<div className='hero__content'>
 					<h1 className='hero__title text-xl'>
-						<span className='hero__title-line'>
-							<span className='hero__title-line-inner'>Строим дома</span>
+						<span className='reveal'>
+							<span className='reveal__inner'>Строим дома</span>
 						</span>
-						<span className='hero__title-line'>
-							<span className='hero__title-line-inner'>в Севастополе и Крыму.</span>
+						<span className='reveal'>
+							<span className='reveal__inner'>в Севастополе и Крыму.</span>
 						</span>
-						<span className='hero__title-line'>
-							<span className='hero__title-line-inner'>Без хаоса и сюрпризов</span>
+						<span className='reveal'>
+							<span className='reveal__inner'>Без хаоса и сюрпризов</span>
 						</span>
 					</h1>
 					<div className='hero__partners'>
