@@ -12,8 +12,20 @@ export default class ExpertiseScroll {
 		this.total = this.items.length
 		this.current = 0
 
-		if (this.total && window.matchMedia('(width > 1024px)').matches) {
+		if (!this.total) return
+
+		this.mq = window.matchMedia('(width > 1024px)')
+		this.mq.addEventListener('change', this.onBreakpoint)
+		this.onBreakpoint()
+	}
+
+	onBreakpoint = () => {
+		if (this.mq.matches) {
+			this.resetForTablet()
 			this.init()
+		} else {
+			this.destroy()
+			this.resetForTablet()
 		}
 	}
 
@@ -21,20 +33,38 @@ export default class ExpertiseScroll {
 		return String(n).padStart(2, '0')
 	}
 
+	resetForTablet() {
+		this.items.forEach(item => {
+			item.style.removeProperty('visibility')
+			item.style.removeProperty('opacity')
+			item.style.removeProperty('clip-path')
+		})
+
+		this.slides.forEach(slide => {
+			slide.style.removeProperty('visibility')
+			slide.style.removeProperty('opacity')
+			slide.style.removeProperty('clip-path')
+		})
+	}
+
+	destroy() {
+		ScrollTrigger.getAll()
+			.filter(st => st.vars?.trigger === this.el || st.trigger === this.el)
+			.forEach(st => st.kill())
+
+		gsap.killTweensOf([...this.items, ...this.slides])
+		this.el.style.removeProperty('--expertise-count')
+	}
+
 	init() {
-		// Высота секции = кол-во слайдов × 100vh (задаётся через CSS-переменную)
 		this.el.style.setProperty('--expertise-count', this.total)
 
-		// Начальное состояние картинок:
-		// первая открыта, остальные закрыты шторкой (top = 100%)
 		this.slides.forEach((slide, i) => {
 			gsap.set(slide, {
 				clipPath: i === 0 ? 'inset(0% 0 0% 0)' : 'inset(100% 0 0% 0)'
 			})
 		})
 
-		// Начальное состояние контента:
-		// первый видим, остальные скрыты
 		this.items.forEach((item, i) => {
 			gsap.set(item, {
 				visibility: i === 0 ? 'visible' : 'hidden',
@@ -42,47 +72,38 @@ export default class ExpertiseScroll {
 			})
 		})
 
-		// Для каждого перехода создаём отдельный ScrollTrigger с scrub
-		// Каждый занимает 1/total часть общей высоты секции
 		this.slides.forEach((slide, i) => {
-			if (i === 0) return // первый уже открыт
+			if (i === 0) return
 
 			const prevItem = this.items[i - 1]
 			const currItem = this.items[i]
 
-			// Точки старта/конца в px внутри секции
-			// каждый переход занимает равный отрезок скролла
 			const start = `top+=${(i / this.total) * 100}% top`
 			const end = `top+=${((i + 0.5) / this.total) * 100}% top`
 
-			// ── Картинка: scrub привязывает шторку к скроллу напрямую ──
-			// inset(top) уменьшается с 100% → 0% по мере скролла вниз
 			gsap.fromTo(
 				slide,
 				{ clipPath: 'inset(100% 0 0% 0)' },
 				{
 					clipPath: 'inset(0% 0 0% 0)',
-					ease: 'none', // ease: none обязателен для scrub — иначе будет рывок
+					ease: 'none',
 					scrollTrigger: {
 						trigger: this.el,
 						start,
 						end,
-						scrub: true // шторка двигается синхронно со скроллом
+						scrub: true
 					}
 				}
 			)
 
-			// ── Контент: переключается в середине перехода ───────────
 			ScrollTrigger.create({
 				trigger: this.el,
-				// середина анимации шторки — момент смены контента
 				start: `top+=${((i + 0.25) / this.total) * 100}% top`,
 				onEnter: () => this.showItem(i, prevItem, currItem),
 				onLeaveBack: () => this.showItem(i - 1, currItem, prevItem)
 			})
 		})
 
-		// Счётчик: обновляется синхронно со скроллом
 		ScrollTrigger.create({
 			trigger: this.el,
 			start: 'top top',
@@ -102,11 +123,17 @@ export default class ExpertiseScroll {
 				}
 			}
 		})
+
+		ScrollTrigger.create({
+			trigger: this.el,
+			start: 'bottom bottom',
+			end: '+=1000',
+			pin: true,
+			pinSpacing: true
+		})
 	}
 
-	// Переключает видимость контента между двумя айтемами
 	showItem(index, outItem, inItem) {
-		// Скрываем предыдущий контент
 		gsap.to(outItem, {
 			opacity: 0,
 			duration: 0.25,
@@ -114,10 +141,8 @@ export default class ExpertiseScroll {
 			onComplete: () => gsap.set(outItem, { visibility: 'hidden' })
 		})
 
-		// Показываем новый контент
 		gsap.set(inItem, { visibility: 'visible', opacity: 0 })
 
-		// Заголовок едет снизу вверх из-под маски (overflow: hidden на родителе)
 		const titleEl = inItem.querySelector('.expertise__title-inner')
 		if (titleEl) {
 			gsap.fromTo(
@@ -127,7 +152,6 @@ export default class ExpertiseScroll {
 			)
 		}
 
-		// Подзаголовок и описание — fade in
 		const fadeEls = [
 			inItem.querySelector('.expertise__subtitle'),
 			inItem.querySelector('.expertise__description')

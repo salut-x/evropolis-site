@@ -5,7 +5,7 @@
   right: 0;
   z-index: 100;
   padding-block: fluid(32, 12);
-  
+
 
   &--light {
     color: var(--color-light);  // белый текст для ссылок меню
@@ -16,15 +16,18 @@
   }
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     column-gap: 16px;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
   }
 
-  &__logo {
-    flex: 1;
-  }
 
   &__menu {
     display: flex;
@@ -68,6 +71,7 @@
   &__compact {
   display: flex;
   column-gap: fluid-to-laptop(8, 4);
+
 }
 }
 

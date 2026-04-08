@@ -83,7 +83,7 @@ const Footer = () => {
 					</div>
 					<a
 						href='https://pines.agency'
-						className='footer__agency'
+						className='footer__credits'
 						target='_blank'
 					>
 						Сделано в pines.agency

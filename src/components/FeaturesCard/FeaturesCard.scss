@@ -1,0 +1,35 @@
+.features__card {
+  opacity: 0;
+  border: 1px solid #6C6C6C;
+  border-radius: var(--border-radius-s);
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-top {
+    padding: fluid-to-laptop(24,16);
+
+  }
+  &-icon {
+    --iconSize: 40px;
+
+    @include laptop {
+       --iconSize: 30px;
+    }
+  }
+
+  &-body {
+    padding-inline: fluid-to-laptop(24,16);
+    display: grid;
+    row-gap: fluid-to-laptop(24,8);
+    margin-top: fluid-to-laptop(120, 80);
+    margin-bottom: fluid-to-laptop(80, 48);
+  }
+
+  &-bottom {
+    border-top: 1px solid #6C6C6C;
+    padding: fluid-to-laptop(24,16);
+    margin-top: auto;
+  }
+}

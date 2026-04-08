@@ -1,0 +1,20 @@
+.features {
+  &__section {
+    background-color: var(--color-dark-10);
+    color: var(--color-light);
+    text-align: center;
+    padding-block: 120px;
+
+
+    @include tablet {
+      padding-block: 80px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: fluid(16,10);
+    align-items: stretch;
+  }
+}

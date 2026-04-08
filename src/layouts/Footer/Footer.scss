@@ -112,13 +112,10 @@
     padding-block: fluid(24, 16);
     color: var(--color-gray-60);
 
-    @include tablet {
-      flex-direction: column;
+    @include mobile {
+      display: grid;
       row-gap: 4px;
-      align-items: center;
-    }
-    @include mobile-s {
-      align-items: start;
+      align-items: end;
     }
   }
 
@@ -127,14 +124,11 @@
     align-items: center;
     column-gap: 16px;
 
-    @include tablet {
-    order: -1;  // ← выше всех
-  }
-
-  @include mobile  {
+  @include tablet  {
     flex-direction: column;
     align-items: start;
     column-gap: 4px;
+    order: -1;
 
     & > span {
     display: none;
@@ -154,7 +148,7 @@
 
   }
 
-  &__agency {
+  &__credits {
     color: var(--color-dark);
     font-weight: 600;
 

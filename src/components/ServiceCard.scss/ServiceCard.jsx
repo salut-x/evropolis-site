@@ -25,7 +25,7 @@ const ServiceCard = props => {
 						<h2 className='section__title'>
 							<span>(4)</span> Экспертиза
 						</h2>
-						<span className='section__title service-card__counter'>
+						<span className='section__title'>
 							{formatIndex(index)} / {formatIndex(total)}
 						</span>
 					</header>

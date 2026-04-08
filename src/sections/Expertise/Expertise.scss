@@ -1,6 +1,10 @@
 .expertise {
   height: calc(var(--expertise-count, 5) * 100vh);
 
+  &__counter {
+    @include visually-hidden;
+  }
+
   &__sticky {
     position: sticky;
     top: 0;
@@ -46,6 +50,16 @@
       visibility: hidden;
       opacity: 0;
     }
+
+    @include tablet {
+      border-top: var(--border);
+      padding: 32px 0 32px 0;
+
+      &:first-child {
+        border-top: none;
+        margin-top: 64px;
+      }
+    }
   }
 
   &__body {
@@ -80,6 +94,10 @@
   &__media {
     position: relative;
     overflow: hidden;
+
+    @include tablet {
+      @include visually-hidden;
+    }
   }
 
   &__slide {
