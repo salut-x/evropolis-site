@@ -70,7 +70,7 @@ export default class HeroAnimation {
 
 		// 6. H1 строки из маски снизу вверх
 		tl.from(
-			'.hero__title-line-inner',
+			'.hero__title .reveal__inner',
 			{
 				yPercent: 110,
 				duration: 1,

@@ -1,0 +1,155 @@
+.expertise {
+  height: calc(var(--expertise-count, 5) * 100vh);
+
+  &__sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    overflow: hidden;
+    background-color: var(--color-light);
+  }
+
+  &__content {
+    position: relative; // контейнер для абсолютных айтемов
+    display: flex;
+    flex-direction: column;
+    padding-left: fluid-to-laptop(40, 24);
+    padding-right: fluid-to-laptop(32, 16);
+  }
+
+  &__header {
+    // хедер выносим из потока айтемов — он общий для всех слайдов
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 32px;
+  }
+
+  &__items {
+    // обёртка для айтемов — занимает оставшееся место
+    position: relative;
+    flex: 1;
+  }
+
+  &__item {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; // контент прижат к низу
+
+    &:not(:first-child) {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__body {
+    padding-top: 40px;
+    padding-bottom: fluid(80, 32);
+    padding-right: fluid-to-laptop(170, 140);
+
+    @include tablet {
+      padding-right: 0;
+    }
+  }
+
+  &__title-wrap {
+    overflow: hidden;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: fluid-to-laptop(16, 8);
+    display: block;
+  }
+
+  &__subtitle {
+    color: #9D9D9D;
+    margin-bottom: fluid-to-laptop(40, 24);
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__media {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__slide {
+    position: absolute;
+    inset: 0;
+
+    &:first-child {
+      clip-path: inset(0 0 0% 0);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @include tablet {
+    height: auto;
+
+    &__sticky {
+      position: static;
+      height: auto;
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__content {
+      padding-inline: 16px;
+    }
+
+    &__items {
+      position: static;
+      flex: none;
+    }
+
+    &__item {
+      position: static;
+      inset: auto;
+
+      &:not(:first-child) {
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: block;
+      }
+    }
+
+    &__slide {
+      position: static;
+      clip-path: none !important;
+
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+
+    &__media {
+      max-height: 738px;
+    }
+  }
+
+  @include mobile {
+    &__content {
+      padding-inline: 10px;
+    }
+
+    &__media {
+      max-height: 396px;
+    }
+  }
+}

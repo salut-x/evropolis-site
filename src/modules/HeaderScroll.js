@@ -22,7 +22,7 @@ class HeaderScroll {
 		}
 
 		ScrollTrigger.create({
-			start: '500px top',
+			start: '800px top',
 			onEnter: () =>
 				gsap.to(this.compactElement, {
 					y: '0%',
