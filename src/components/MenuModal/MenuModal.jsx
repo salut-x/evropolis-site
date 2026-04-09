@@ -2,7 +2,6 @@ import { Button } from '@/components/Button'
 import { Icon } from '@/components/Icon'
 import { Link } from '@/components/Link'
 import { contactsData } from '@/constants/contactsData'
-import { headerMenuItems } from '@/constants/headerData'
 import classNames from 'classnames'
 import './MenuModal.scss'
 
@@ -34,7 +33,7 @@ const MenuDialog = ({ className }) => {
 				<div className='menu-dialog__inner'>
 					<nav className='menu-dialog__nav'>
 						<div className='menu-dialog__list'>
-							{headerMenuItems.map(({ label, href }, index) => (
+							{contactsData.navLinks.map(({ label, href }, index) => (
 								<Link
 									key={index}
 									href={href}

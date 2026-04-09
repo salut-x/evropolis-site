@@ -1,3 +1,4 @@
+import FilterTabs from './modules/FilterTabs'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
@@ -9,6 +10,7 @@ import FeaturesAnimation from './modules/FeaturesAnimation'
 import HeaderScroll from './modules/HeaderScroll'
 import HeroAnimation from './modules/HeroAnimation'
 import MenuModal from './modules/MenuModal'
+import PageLoadReveal from './modules/PageLoadReveal'
 import Preloader from './modules/Preloader'
 import TitleReveal from './modules/TitleReveal'
 
@@ -43,3 +45,8 @@ document.querySelectorAll('[data-js-expertise]').forEach(el => {
 })
 
 new TitleReveal().init()
+new PageLoadReveal()
+
+document.querySelectorAll('[data-js-filter]').forEach(el => {
+	new FilterTabs(el)
+})

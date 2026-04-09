@@ -1,4 +1,5 @@
 // src/layouts/index.jsx
+import { Icon } from '@/components/Icon'
 import { Preloader } from '@/components/Preloader'
 import '@/components/Preloader/Preloader.scss'
 import { Content } from '@/layouts/Content'
@@ -56,6 +57,28 @@ export default function (props) {
 			/>
 			<Content>{children}</Content>
 			<Footer />
+			<dialog
+				className='cta-dialog'
+				data-js-cta-dialog
+			>
+				<button
+					className='cta-dialog__close'
+					type='button'
+					aria-label='Закрыть'
+					data-js-cta-close
+				>
+					<Icon
+						name='close'
+						className='menu-dialog__close-icon'
+					/>
+				</button>
+				<div className='cta-dialog__inner'>
+					<h2 className='cta-dialog__title'>Рассчитать стоимость</h2>
+					<p className='cta-dialog__subtitle'>
+						Оставьте контакты, и мы свяжемся с вами в ближайшее время
+					</p>
+				</div>
+			</dialog>
 		</>
 	)
 }

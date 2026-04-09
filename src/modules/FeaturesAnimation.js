@@ -55,8 +55,7 @@ export default class FeaturesAnimation {
 				gsap.to(batch, {
 					opacity: 1,
 					y: 0,
-					// на планшете delay меньше — карточки появляются быстрее
-					delay: this.mq.matches ? 0.3 : 0.3,
+					delay: this.mq.matches ? 1 : 0.3,
 					duration: 0.7,
 					ease: 'power3.out',
 					stagger: 0.2

@@ -46,9 +46,15 @@
     @include tablet {
       justify-content: center;
       align-items: center;
-      text-align: center;
-      row-gap: 8px;
     }
+    @include mobile-s {
+      justify-content: center;
+      align-items: start;
+      text-align: start;
+    }
+  }
 
+  &__text {
+    max-width: fluid-to-laptop(1100, 830);
   }
 }

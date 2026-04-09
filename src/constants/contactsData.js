@@ -11,7 +11,8 @@ export const contactsData = {
 	email: 'mop1@evropolis-pro.ru',
 	emailHref: 'mailto:mop1@evropolis-pro.ru',
 	navLinks: [
-		{ label: 'Проекты', href: '/projects' },
+		{ label: 'Главная', href: '/' },
+    { label: 'Проекты', href: '/projects' },
 		{ label: 'О компании', href: '/about' },
 		{ label: 'Галерея', href: '/gallery' },
 		{ label: 'Контакты', href: '/contacts' }

@@ -18,7 +18,7 @@ const Expertise = () => {
 							<span>(4)</span> Экспертиза
 						</span>
 						<span
-							className='section__title expertise__counter'
+							className='section__counter expertise__counter'
 							data-js-expertise-counter
 						>
 							{fmt(1)} / {fmt(total)}

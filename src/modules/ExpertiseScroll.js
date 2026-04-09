@@ -89,6 +89,12 @@ export default class ExpertiseScroll {
 				visibility: i === 0 ? 'visible' : 'hidden',
 				opacity: i === 0 ? 1 : 0
 			})
+
+			// Начальное состояние заголовка — готов к въезду снизу
+			const titleEl = item.querySelector('.expertise__title-inner')
+			if (titleEl && i !== 0) {
+				gsap.set(titleEl, { yPercent: 110 })
+			}
 		})
 
 		this.slides.forEach((slide, i) => {
@@ -160,23 +166,33 @@ export default class ExpertiseScroll {
 	// Анимация смены текстового блока:
 	// outItem — уходящий, inItem — входящий
 	showItem(index, outItem, inItem) {
+		// Заголовок уходящего укатывается вниз в маску
+		const outTitleEl = outItem.querySelector('.expertise__title-inner')
+		if (outTitleEl) {
+			gsap.to(outTitleEl, {
+				yPercent: 110,
+				duration: 0.5,
+				ease: 'power3.in',
+			})
+		}
+
 		// Скрываем уходящий блок
 		gsap.to(outItem, {
 			opacity: 0,
-			duration: 0.2,
+			duration: 0.3,
 			ease: 'power2.in',
 			onComplete: () => gsap.set(outItem, { visibility: 'hidden' })
 		})
 
 		gsap.set(inItem, { visibility: 'visible', opacity: 0 })
 
-		// Заголовок въезжает снизу вверх
-		const titleEl = inItem.querySelector('.expertise__title-inner')
-		if (titleEl) {
+		// Заголовок входящего въезжает снизу вверх из маски
+		const inTitleEl = inItem.querySelector('.expertise__title-inner')
+		if (inTitleEl) {
 			gsap.fromTo(
-				titleEl,
+				inTitleEl,
 				{ yPercent: 110 },
-				{ yPercent: 0, duration: 1.1, ease: 'power3.out', delay: 0.1 }
+				{ yPercent: 0, duration: 1.1, ease: 'power3.out', delay: 0.2 }
 			)
 		}
 
@@ -190,11 +206,11 @@ export default class ExpertiseScroll {
 			gsap.fromTo(
 				fadeEls,
 				{ opacity: 0 },
-				{ opacity: 1, duration: 1.1, ease: 'power2.out', delay: 0.2 }
+				{ opacity: 1, duration: 1.1, ease: 'power2.out', delay: 0.3 }
 			)
 		}
 
 		// Делаем весь блок видимым с небольшой задержкой
-		gsap.to(inItem, { opacity: 1, duration: 0.1, delay: 0.1 })
+		gsap.to(inItem, { opacity: 1, duration: 0.1, delay: 0.2 })
 	}
-}
+} 

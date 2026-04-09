@@ -1,0 +1,18 @@
+.projects {
+  &__section {
+    padding-top: fluid(200, 80);
+  }
+
+&__footer {
+  @include flex-center;
+  flex-direction: column;
+  row-gap: fluid(24,8);
+  margin-top: fluid(200,40);
+  text-align: center;
+}
+
+&__teaser {
+  max-width: fluid(600, 320);
+}
+
+}

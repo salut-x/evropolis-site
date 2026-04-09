@@ -25,7 +25,7 @@ const ServiceCard = props => {
 						<h2 className='section__title'>
 							<span>(4)</span> Экспертиза
 						</h2>
-						<span className='section__title'>
+						<span className='section__counter'>
 							{formatIndex(index)} / {formatIndex(total)}
 						</span>
 					</header>
@@ -55,4 +55,3 @@ const ServiceCard = props => {
 }
 
 export default ServiceCard
-

@@ -24,20 +24,10 @@ const CTA = () => {
 				</video>
 			</div>
 			<div className='cta__inner container'>
-				<div className='cta__content'>
-					<div className='cta__text text-xl fade-in'>
-						<span className='reveal'>
-							<span className='reveal__inner'>Давайте обсудим ваш проект</span>
-						</span>
-						<span className='reveal'>
-							<span className='reveal__inner'>
-								и рассчитаем оптимальное решение
-							</span>
-						</span>
-						<span className='reveal'>
-							<span className='reveal__inner'>под задачи, бюджет и сроки</span>
-						</span>
-					</div>
+				<div className='cta__content fade-in'>
+					<h2 className='cta__text text-xl '>
+            Давайте обсудим ваш проект и рассчитаем оптимальное решение под задачи, бюджет и сроки
+					</h2>
 					<div className='cta__btn-wrap'>
 						<CtaModal />
 					</div>

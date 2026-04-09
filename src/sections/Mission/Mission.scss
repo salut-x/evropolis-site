@@ -7,7 +7,7 @@
     flex-direction: column;
     color: var(--color-light);
     margin-top: fluid(100,40);
-    padding-block: fluid-to-laptop(32,24);
+    padding-bottom: fluid(56,24);
   }
 
   &__bg {
@@ -33,6 +33,7 @@
     position: relative;
     z-index: 1;
     min-height: 100vh;
+    justify-items: center;
     display: grid;
   }
 
@@ -40,17 +41,22 @@
     display: flex;
     height: 100%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: fluid-to-laptop(24,16);
+
     @include tablet {
       justify-content: center;
       align-items: center;
-      text-align: center;
       row-gap: 8px;
     }
 
-  }
+    @include mobile-s {
+      align-items: start;
+      text-align: start;
+    }
 
-  &__text {
     max-width: fluid(757,340);
   }
 }

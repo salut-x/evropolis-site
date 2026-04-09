@@ -24,14 +24,12 @@ const Mission = () => {
 			</div>
 			<div className='mission__inner container'>
 				<div className='mission__content'>
-					<h2 className='section__title'>
+					<h2 className='section__title fade-in'>
 						<span>(3)</span> Миссия
 					</h2>
 					<div className='mission__text text-lg fade-in'>
 						<p>
-							Создавать дома, которые служат десятилетиями, и делать это так,
-							чтобы вам не приходилось погружаться в хаос стройки. Мы управляем
-							процессом — вы получаете результат
+              Создавать дома, которые служат десятилетиями, и делать это так, чтобы вам не приходилось погружаться в хаос стройки. Мы управляем процессом — вы получаете результат.
 						</p>
 					</div>
 				</div>

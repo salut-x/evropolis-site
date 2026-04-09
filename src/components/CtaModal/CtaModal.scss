@@ -10,11 +10,12 @@
   border: none;
   background-color: var(--color-light);
   overflow-y: auto;
-  z-index: 100;
+  z-index: 102;
 
   @include tablet {
     width: 100%;
-  left: 0;
+    left: 0;
+    right: 0;
   }
     &__close {
     @include square(45px);

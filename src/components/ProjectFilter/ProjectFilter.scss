@@ -1,0 +1,42 @@
+.project-filter {
+  &__list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    margin-top: fluid(40,16);
+    margin-bottom: 24px;
+    padding-bottom: fluid(16,8);
+    border-bottom: var(--border);
+
+    @include mobile-s {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: baseline;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: var(--color-gray-30);
+    cursor: pointer;
+    transition: color 0.2s;
+    white-space: nowrap;
+    font-size: fluid-to-laptop(20,16);
+    gap: 4px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 135%; /* 70.4px */
+
+    &--active {
+      color: var(--color-dark);
+    }
+
+    &:hover:not(&--active) {
+      color: var(--color-text-primary);
+    }
+  }
+}
