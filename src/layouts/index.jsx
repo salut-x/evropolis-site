@@ -47,7 +47,7 @@ export default function (props) {
 				<title>{title ? `Европолис | ${title}` : 'Европолис'}</title>
 				<script
 					type='module'
-					src='src/main.js'
+					src='/src/main.js'
 				/>
 			</Head>
 			<Preloader />
@@ -57,6 +57,7 @@ export default function (props) {
 			/>
 			<Content>{children}</Content>
 			<Footer />
+
 			<dialog
 				className='cta-dialog'
 				data-js-cta-dialog

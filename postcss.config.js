@@ -1,5 +1,4 @@
-import pkg from 'postcss-pxtorem'
-const { postcssPxToRem } = pkg
+import postcssPxToRem from 'postcss-pxtorem'
 
 export default ({ env }) => {
 	const isProd = env === 'production'

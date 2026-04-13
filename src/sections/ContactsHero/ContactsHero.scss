@@ -1,0 +1,38 @@
+.contacts-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/src/assets/images/contacts/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    will-change: transform;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    align-items: end;
+  }
+
+  &__title {
+    color: var(--color-light);
+    text-transform: uppercase;
+    margin-bottom: fluid(24, 16);
+  }
+}

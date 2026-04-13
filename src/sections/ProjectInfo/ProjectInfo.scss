@@ -1,0 +1,70 @@
+.project-info {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: fluid(80, 40);
+    padding-bottom: fluid(120,80);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  &__tags {
+    display: grid;
+    row-gap: 4px;
+    align-self: start;
+  }
+
+  &__tag {
+    display: flex;
+    gap: 8px;
+
+    &-label {
+      opacity: 50%;
+    }
+  }
+
+  &__content {
+    display: grid;
+    row-gap: fluid(48,32);
+  }
+
+  &__specs {
+    display: grid;
+    row-gap: fluid(24,16);
+
+    &-title {
+      @include mobile {
+        font-weight: 700;
+      }
+    }
+
+    &-list {
+      display: grid;
+      row-gap: fluid-to-laptop(16,8 );
+      list-style: square;
+      padding-left: 20px;
+    }
+
+    &-item {
+      padding-left: 0px;
+    }
+  }
+
+  &__price-note {
+    opacity: 50%;
+  }
+
+  &__actions {
+    display: flex;
+    column-gap: 4px;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 4px;
+      align-items: start;
+    }
+  }
+}

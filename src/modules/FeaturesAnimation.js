@@ -55,7 +55,7 @@ export default class FeaturesAnimation {
 				gsap.to(batch, {
 					opacity: 1,
 					y: 0,
-					delay: this.mq.matches ? 1 : 0.3,
+					delay: this.mq.matches ? 1.2: 0.3,
 					duration: 0.7,
 					ease: 'power3.out',
 					stagger: 0.2

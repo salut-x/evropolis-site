@@ -1,4 +1,3 @@
-import FilterTabs from './modules/FilterTabs'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
@@ -7,12 +6,15 @@ import CtaModal from './modules/CtaModal'
 import ExpertiseScroll from './modules/ExpertiseScroll'
 import FadeIn from './modules/FadeIn'
 import FeaturesAnimation from './modules/FeaturesAnimation'
+import FilterTabs from './modules/FilterTabs'
 import HeaderScroll from './modules/HeaderScroll'
 import HeroAnimation from './modules/HeroAnimation'
 import MenuModal from './modules/MenuModal'
 import PageLoadReveal from './modules/PageLoadReveal'
 import Preloader from './modules/Preloader'
+import ProjectHeroAnimation from './modules/ProjectHeroAnimation'
 import TitleReveal from './modules/TitleReveal'
+import VideoModal from './modules/VideoModal'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -33,8 +35,16 @@ lenis.on('scroll', ScrollTrigger.update)
 
 new Preloader()
 new HeroAnimation()
+new ProjectHeroAnimation()
 new AboutAnimation().init()
-new FadeIn().init()
+
+document.addEventListener(
+	'preloaderDone',
+	() => {
+		new FadeIn().init()
+	},
+	{ once: true }
+)
 new CtaModal()
 new MenuModal()
 new HeaderScroll()
@@ -46,6 +56,7 @@ document.querySelectorAll('[data-js-expertise]').forEach(el => {
 
 new TitleReveal().init()
 new PageLoadReveal()
+new VideoModal()
 
 document.querySelectorAll('[data-js-filter]').forEach(el => {
 	new FilterTabs(el)

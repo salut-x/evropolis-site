@@ -1,0 +1,28 @@
+.recent-projects {
+	padding: fluid(100, 60) 0;
+
+
+  &__inner {
+    display: grid;
+  row-gap: fluid(80, 40);
+  }
+
+	&__title {
+		text-transform: uppercase;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: fluid(24, 16);
+		align-items: end;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    .project-card__image {
+      min-height: 320px;
+    }
+	}
+}
