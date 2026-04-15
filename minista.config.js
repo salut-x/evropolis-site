@@ -2,6 +2,7 @@ import {
 	defineConfig,
 	pluginBeautify,
 	pluginBundle,
+	pluginEntry,
 	pluginImage,
 	pluginIsland,
 	pluginMdx,
@@ -43,6 +44,7 @@ export default defineConfig(({ command, isSsrBuild }) => {
 
 		plugins: [
 			pluginSsg(),
+			pluginEntry(),
 
 			// assets.images → pluginImage
 			pluginImage({

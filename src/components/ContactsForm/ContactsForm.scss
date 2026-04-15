@@ -1,0 +1,30 @@
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: fluid(40,24);
+  width: 100%;
+
+  &__cell {
+    &--actions {
+      display: flex;
+      flex-direction: column;
+      row-gap: fluid(24,16);
+    }
+  }
+
+  &__agreement {
+    &--secondary {
+      color: var(--color-gray-30);
+
+     & a {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+
+        @include hover {
+          color: var(--color-dark);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

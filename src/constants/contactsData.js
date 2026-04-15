@@ -6,6 +6,8 @@ export const contactsData = {
 	},
 	addressCity: 'г. Севастополь,',
 	addressStreet: 'ул. Коммунистическая, 15-б',
+  workHours: 'Пн–Пт: c 09:00 до 18:00',
+  daysOff: 'Сб–Вс: выходной',
 	phone: '+7 (991) 222-05-39',
 	phoneHref: 'tel:+79912220539',
 	email: 'mop1@evropolis-pro.ru',

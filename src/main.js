@@ -1,3 +1,4 @@
+import InputMaskCollection from '@/modules/InputMaskCollection'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
@@ -16,48 +17,52 @@ import ProjectHeroAnimation from './modules/ProjectHeroAnimation'
 import TitleReveal from './modules/TitleReveal'
 import VideoModal from './modules/VideoModal'
 
-gsap.registerPlugin(ScrollTrigger)
+if (typeof window !== 'undefined') {
+	gsap.registerPlugin(ScrollTrigger)
 
-const lenis = new Lenis({
-	duration: 1.1,
-	easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-})
+	const lenis = new Lenis({
+		duration: 1.1,
+		easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+	})
 
-window.lenis = lenis
+	window.lenis = lenis
 
-gsap.ticker.add(time => {
-	lenis.raf(time * 1000)
-})
+	gsap.ticker.add(time => {
+		lenis.raf(time * 1000)
+	})
 
-gsap.ticker.lagSmoothing(0)
+	gsap.ticker.lagSmoothing(0)
 
-lenis.on('scroll', ScrollTrigger.update)
+	lenis.on('scroll', ScrollTrigger.update)
 
-new Preloader()
-new HeroAnimation()
-new ProjectHeroAnimation()
-new AboutAnimation().init()
+	new Preloader()
+	new HeroAnimation()
+	new ProjectHeroAnimation()
+	new AboutAnimation().init()
 
-document.addEventListener(
-	'preloaderDone',
-	() => {
-		new FadeIn().init()
-	},
-	{ once: true }
-)
-new CtaModal()
-new MenuModal()
-new HeaderScroll()
-new FeaturesAnimation()
+	document.addEventListener(
+		'preloaderDone',
+		() => {
+			new FadeIn().init()
+		},
+		{ once: true }
+	)
+	new CtaModal()
+	new MenuModal()
+	new HeaderScroll()
+	new FeaturesAnimation()
 
-document.querySelectorAll('[data-js-expertise]').forEach(el => {
-	new ExpertiseScroll(el)
-})
+	document.querySelectorAll('[data-js-expertise]').forEach(el => {
+		new ExpertiseScroll(el)
+	})
 
-new TitleReveal().init()
-new PageLoadReveal()
-new VideoModal()
+	new TitleReveal().init()
+	new PageLoadReveal()
+	new VideoModal()
 
-document.querySelectorAll('[data-js-filter]').forEach(el => {
-	new FilterTabs(el)
-})
+	document.querySelectorAll('[data-js-filter]').forEach(el => {
+		new FilterTabs(el)
+	})
+}
+
+new InputMaskCollection()

@@ -1,0 +1,9 @@
+Options -MultiViews
+DirectorySlash Off
+RewriteEngine On
+
+# Serve .html files for clean URLs (e.g. /about → /about.html)
+# The trailing /? handles cases where a directory with the same name exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]

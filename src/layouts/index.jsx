@@ -18,6 +18,7 @@ export default function (props) {
 	return (
 		<>
 			<Head htmlAttributes={{ lang: 'en' }}>
+				<script type='module' src='/src/main.js'></script>
 				<link
 					rel='icon'
 					type='image/png'
@@ -45,10 +46,6 @@ export default function (props) {
 					href='/site.webmanifest'
 				/>
 				<title>{title ? `Европолис | ${title}` : 'Европолис'}</title>
-				<script
-					type='module'
-					src='/src/main.js'
-				/>
 			</Head>
 			<Preloader />
 			<Header

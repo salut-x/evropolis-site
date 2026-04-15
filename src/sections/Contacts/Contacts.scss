@@ -1,0 +1,51 @@
+.contacts {
+  &__inner  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      row-gap: 80px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    row-gap: fluid-to-laptop(56, 40);
+  }
+
+  &__item {
+    display: grid;
+    row-gap: fluid-to-laptop(16,8);
+    justify-content: start;
+
+    &--title {
+      opacity: 40%;
+    }
+
+    &--wrapper {
+      display: grid;
+      row-gap: fluid-to-laptop(40,24);
+    }
+
+    &--body {
+      display: grid;
+      row-gap: 8px;
+    }
+
+    &--link {
+      @include hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  &__contacts-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(40,24);
+    width: 100%;
+  }
+}

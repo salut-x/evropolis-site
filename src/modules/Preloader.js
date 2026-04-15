@@ -10,9 +10,13 @@ export default class Preloader {
 		window.lenis?.stop()
 
 		const minDelay = new Promise(resolve => setTimeout(resolve, 1200))
-		const pageLoad = new Promise(resolve =>
-			window.addEventListener('load', resolve)
-		)
+		const pageLoad = new Promise(resolve => {
+			if (document.readyState !== 'loading') {
+				resolve()
+			} else {
+				document.addEventListener('DOMContentLoaded', resolve, { once: true })
+			}
+		})
 
 		Promise.all([minDelay, pageLoad]).then(() => this.hide())
 	}
