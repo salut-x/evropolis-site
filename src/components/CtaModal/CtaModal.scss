@@ -6,11 +6,18 @@
   height: 100%;
   margin: 0;
   max-height: 100%;
-  padding: fluid(60, 30);
+  padding: fluid(40, 32);
   border: none;
   background-color: var(--color-light);
   overflow-y: auto;
   z-index: 102;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &[open] {
+    display: flex;
+  }
 
   @include tablet {
     width: 100%;
@@ -43,7 +50,15 @@
     display: flex;
     flex-direction: column;
     row-gap: 16px;
-    margin-top: fluid(80, 60);
+    justify-content: space-between;
+    flex: 1;
+    // margin-top: fluid(40, 32);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid-to-laptop(24,16);
   }
 
   &__title {

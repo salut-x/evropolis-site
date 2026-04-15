@@ -38,8 +38,15 @@ const Contacts = () => {
 						</address>
 					</div>
 				</div>
-				<div className='contacts__contacts-form'>
-					<h2 className='text-lg'>Оставьте контакты, и мы свяжемся с вами</h2>
+				<div className='contacts__form'>
+					<div className='contacts__form-body'>
+						<h2 className='contacts__form-title text-lg'>
+							Рассчитать стоимость
+						</h2>
+						<p className='contacts__form-subtitle'>
+							Оставьте контакты, и мы свяжемся с вами в ближайшее время
+						</p>
+					</div>
 					<ContactsForm />
 				</div>
 			</div>

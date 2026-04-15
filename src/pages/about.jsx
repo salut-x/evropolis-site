@@ -1,11 +1,14 @@
+import { AboutCompany } from '@/sections/AboutCompany'
+
 export const metadata = {
-	title: 'О нас'
+	title: 'О нас',
+	headerTheme: 'light'
 }
 
 export default function () {
 	return (
-		<div>
-			<h1>О нас</h1>
-		</div>
+		<>
+			<AboutCompany />
+		</>
 	)
 }

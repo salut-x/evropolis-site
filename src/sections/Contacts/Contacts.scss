@@ -41,11 +41,17 @@
       }
     }
   }
-
-  &__contacts-form {
+    &__form {
     display: flex;
     flex-direction: column;
     row-gap: fluid(40,24);
     width: 100%;
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+    }
   }
+
 }

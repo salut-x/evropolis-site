@@ -1,0 +1,66 @@
+.about-company {
+  position: relative;
+  min-height: 200vh;
+  display: flex;
+  overflow: hidden;
+  padding-block: fluid(240, 120);
+
+  @include tablet {
+    min-height: 120vh;
+  }
+
+  @include mobile {
+    min-height: 120vh;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/src/assets/images/about-us/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    will-change: transform;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(40,24);
+    align-items: start;
+  }
+
+  &__title {
+    color: var(--color-light);
+    text-transform: uppercase;
+    margin-bottom: fluid(24, 16);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__body {
+    grid-column: 7 / span 5;
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(40,16);
+  }
+}

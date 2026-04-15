@@ -1,4 +1,5 @@
 // src/layouts/index.jsx
+import { ContactsForm } from '@/components/ContactsForm'
 import { Icon } from '@/components/Icon'
 import { Preloader } from '@/components/Preloader'
 import '@/components/Preloader/Preloader.scss'
@@ -18,7 +19,10 @@ export default function (props) {
 	return (
 		<>
 			<Head htmlAttributes={{ lang: 'en' }}>
-				<script type='module' src='/src/main.js'></script>
+				<script
+					type='module'
+					src='/src/main.js'
+				></script>
 				<link
 					rel='icon'
 					type='image/png'
@@ -71,10 +75,13 @@ export default function (props) {
 					/>
 				</button>
 				<div className='cta-dialog__inner'>
-					<h2 className='cta-dialog__title'>Рассчитать стоимость</h2>
-					<p className='cta-dialog__subtitle'>
-						Оставьте контакты, и мы свяжемся с вами в ближайшее время
-					</p>
+					<div className='cta-dialog__header'>
+						<h2 className='cta-dialog__title'>Рассчитать стоимость</h2>
+						<p className='cta-dialog__subtitle'>
+							Оставьте контакты, и мы свяжемся с вами в ближайшее время
+						</p>
+					</div>
+					<ContactsForm />
 				</div>
 			</dialog>
 		</>
