@@ -1,8 +1,28 @@
 .history {
+  &__slider {
+    @include tablet {
+      overflow: hidden;
+      margin-inline: -16px;
+      padding-inline: 16px 48px;
+    }
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 16px;
-    align-items: stretch
+    align-items: stretch;
+
+    @include tablet {
+      display: flex;
+    }
+  }
+
+  &__item {
+    @include tablet {
+      width: 75vw;
+      max-width: 360px;
+      height: auto;
+    }
   }
 }

@@ -34,11 +34,8 @@ export default class HistorySlider {
 
   initSwiper() {
     if (this.swiper) return
-    this.root.classList.add('swiper')
     this.swiper = new Swiper(this.root, {
-      modules: [FreeMode],
       slidesPerView: 'auto',
-      freeMode: true,
       grabCursor: true,
     })
   }
@@ -46,7 +43,6 @@ export default class HistorySlider {
   destroySwiper() {
     if (!this.swiper) return
     this.swiper.destroy(true, true)
-    this.root.classList.remove('swiper')
     this.swiper = null
   }
 

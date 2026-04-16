@@ -1,4 +1,5 @@
 import AboutCompanyText from '@/modules/AboutCompanyText.js'
+import TeamAnimation from './modules/TeamAnimation'
 import InputMaskCollection from '@/modules/InputMaskCollection'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -70,3 +71,4 @@ if (typeof window !== 'undefined') {
 new InputMaskCollection()
 new AboutCompanyText()
 new HistorySlider()
+new TeamAnimation()

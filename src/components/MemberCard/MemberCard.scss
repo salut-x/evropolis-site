@@ -1,0 +1,26 @@
+.member-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: fluid(16, 8);
+  max-width: fluid-to-laptop(445, 336);
+
+  img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  @include tablet {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &__role {
+    opacity: 50%;
+  }
+}

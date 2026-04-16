@@ -21,13 +21,13 @@ const History = () => {
 				</header>
 				<div className='section__body'>
 					<div
-						className='history__slider'
+						className='history__slider swiper'
 						data-js-history
 					>
-						<div className='history__list'>
+						<div className='history__list swiper-wrapper'>
 							{HISTORY_DATA.map((item, i) => (
 								<div
-									className='history__item'
+									className='history__item swiper-slide'
 									data-js-history-card
 									key={item.id}
 								>

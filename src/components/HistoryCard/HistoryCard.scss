@@ -1,11 +1,16 @@
 .history-card {
   border-left: 1px solid var(--color-gray-10);
-  padding-inline: 16px fluid(120,80);
+  padding-inline: 16px fluid-to-laptop(120,32);
   display: flex;
   flex-direction: column;
   row-gap: 80px;
   height: 100%;
   justify-content: space-between;
+
+  @include mobile {
+    padding-inline: 10px 24px;
+    row-gap: 40px;
+  }
 
   &__body {
     display: flex;

@@ -2,7 +2,6 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Swiper from 'swiper'
 import 'swiper/css'
-import { FreeMode } from 'swiper/modules'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -36,10 +35,9 @@ export default class FeaturesAnimation {
 		if (this.swiper) return
 
 		this.swiper = new Swiper(this.root, {
-			modules: [FreeMode],
 			slidesPerView: 'auto',
-			freeMode: true,
-			grabCursor: true
+			grabCursor: true,
+			slideToClickedSlide: true
 		})
 	}
 
@@ -55,7 +53,7 @@ export default class FeaturesAnimation {
 				gsap.to(batch, {
 					opacity: 1,
 					y: 0,
-					delay: this.mq.matches ? 1.2: 0.3,
+					delay: this.mq.matches ? 1.2 : 0.3,
 					duration: 0.7,
 					ease: 'power3.out',
 					stagger: 0.2

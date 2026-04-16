@@ -1,0 +1,24 @@
+.principle-card {
+  max-height: fluid-to-laptop(350, 262);
+  background-color: var(--color-gray-20);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-gray-10);
+    padding: 16px;
+
+    @include mobile {
+      padding-left: 10px;
+    }
+  }
+
+  &__number {
+    opacity: 50%;
+  }
+
+  &__description {
+    padding: fluid-to-laptop(120,56) 16px;
+    max-width: fluid-to-laptop(662, 466);
+  }
+}

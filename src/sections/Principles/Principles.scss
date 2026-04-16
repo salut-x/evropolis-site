@@ -1,0 +1,22 @@
+.principles {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__header {
+    padding-bottom: 200px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(16,8);
+  }
+}

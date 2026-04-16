@@ -157,7 +157,17 @@ dialog {
   &__header {
     margin-bottom: fluid(80, 16);
     display: grid;
-    row-gap: fluid-to-laptop(16, 8)
+    row-gap: fluid-to-laptop(16, 8);
+
+    &--centered {
+      text-align: center;
+      align-items: center;
+    }
+
+    &--sticky {
+      position: sticky;
+    top: 40px;
+    }
   }
 
   &__title {
