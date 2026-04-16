@@ -16,7 +16,6 @@ export const contactsData = {
 		{ label: 'Главная', href: '/' },
     { label: 'Проекты', href: '/projects' },
 		{ label: 'О компании', href: '/about' },
-		{ label: 'Галерея', href: '/gallery' },
 		{ label: 'Контакты', href: '/contacts' }
 	],
 	externalLinks: [

@@ -1,3 +1,4 @@
+import AboutCompanyText from '@/modules/AboutCompanyText.js'
 import InputMaskCollection from '@/modules/InputMaskCollection'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -10,6 +11,7 @@ import FeaturesAnimation from './modules/FeaturesAnimation'
 import FilterTabs from './modules/FilterTabs'
 import HeaderScroll from './modules/HeaderScroll'
 import HeroAnimation from './modules/HeroAnimation'
+import HistorySlider from './modules/HistorySlider'
 import MenuModal from './modules/MenuModal'
 import PageLoadReveal from './modules/PageLoadReveal'
 import Preloader from './modules/Preloader'
@@ -66,3 +68,5 @@ if (typeof window !== 'undefined') {
 }
 
 new InputMaskCollection()
+new AboutCompanyText()
+new HistorySlider()

@@ -38,7 +38,7 @@ const Expertise = () => {
 											{card.title}
 										</h3>
 									</div>
-									<p className='expertise__subtitle text-lg'>{card.subtitle}</p>
+									<p className='expertise__subtitle text-base'>{card.subtitle}</p>
 									<p className='expertise__description text-lg'>
 										{card.description}
 									</p>

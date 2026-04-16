@@ -66,7 +66,7 @@ const Footer = () => {
 					/>
 				</div>
 
-				<div className='footer__bottom'>
+				<div className='footer__bottom text-sm'>
 					<p className='footer__copy'>© 2026 Все права защищены</p>
 					<div className='footer__legal'>
 						<Link
@@ -86,7 +86,7 @@ const Footer = () => {
 						className='footer__credits'
 						target='_blank'
 					>
-						Сделано в pines.agency
+						Сайт pines.agency
 					</a>
 				</div>
 			</div>

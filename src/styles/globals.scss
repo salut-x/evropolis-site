@@ -11,11 +11,15 @@ body {
   flex-direction: column;
   font-family: var(--font-family-base);
   color: var(--color-dark);
-  font-size: fluid-to-laptop(20,16);
-  font-weight: 600;
+  font-size: fluid-to-laptop(18,16);
+  font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 135%; /* 70.4px */
   background-color: var(--color-light);
+
+  @include tablet {
+    font-weight: 400;
+  }
 }
 
 main {
@@ -72,20 +76,32 @@ h4, .text-sm {
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.04em;
+
+  @include tablet {
+    font-weight: 400;
+  }
 }
 
 .text-base {
   font-size: fluid-to-laptop(20,16);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 135%; /* 70.4px */
+
+  @include tablet {
+    font-weight: 400;
+  }
 }
 
 .text-sm {
   font-size: fluid-to-laptop(16,14);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 135%; /* 70.4px */
+
+  @include tablet {
+    font-weight: 400;
+  }
 }
 
 p {
@@ -110,9 +126,6 @@ a, button {
 a {
   color: inherit;
   text-decoration: none;
-  @include hover {
-    // color: var(--color-accent);
-  }
 
   &[class] {
     text-decoration: none;

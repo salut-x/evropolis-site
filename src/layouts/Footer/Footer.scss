@@ -74,7 +74,7 @@
 
     &-link {
       color: var(--color-dark);
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 
@@ -88,11 +88,8 @@
 
     &-link {
       color: var(--color-dark);
-      font-weight: 600;
+      font-weight: 500;
     }
-  }
-
-  &__logo-wrap {
   }
 
   &__logo {
@@ -147,14 +144,14 @@
     }
 
   }
+}
 
   &__credits {
     color: var(--color-dark);
-    font-weight: 600;
+    font-weight: 500;
 
     @include hover {
       color: var(--color-accent);
     }
   }
-}
 }

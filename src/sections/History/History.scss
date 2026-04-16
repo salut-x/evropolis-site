@@ -1,0 +1,8 @@
+.history {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 16px;
+    align-items: stretch
+  }
+}

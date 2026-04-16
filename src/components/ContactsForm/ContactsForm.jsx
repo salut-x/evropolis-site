@@ -43,7 +43,7 @@ const ContactsForm = () => {
 					type='submit'
 					iconName='x-icon'
 				/>
-				<p className='contacts-form__agreement contacts-form__agreement--secondary'>
+				<p className='contacts-form__agreement contacts-form__agreement--secondary text-sm'>
 					Нажимая кнопку , я даю согласие на{' '}
 					<a href='#'>обработку персональных данных</a>
 				</p>
