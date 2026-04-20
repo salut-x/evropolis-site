@@ -14,11 +14,12 @@ import FilterTabs from './modules/FilterTabs'
 import HeaderScroll from './modules/HeaderScroll'
 import HeroAnimation from './modules/HeroAnimation'
 import HistorySlider from './modules/HistorySlider'
+import TeamGallerySlider from './modules/TeamGallerySlider'
 import MenuModal from './modules/MenuModal'
 import PageLoadReveal from './modules/PageLoadReveal'
 import Preloader from './modules/Preloader'
 import ProjectHeroAnimation from './modules/ProjectHeroAnimation'
-import TeamAnimation from './modules/TeamAnimation'
+// import TeamAnimation from './modules/TeamAnimation'
 import TitleReveal from './modules/TitleReveal'
 import VideoModal from './modules/VideoModal'
 
@@ -75,4 +76,5 @@ new InputMaskCollection()
 new SupportForm()
 new AboutCompanyText()
 new HistorySlider()
-new TeamAnimation()
+new TeamGallerySlider()
+// new TeamAnimation()
