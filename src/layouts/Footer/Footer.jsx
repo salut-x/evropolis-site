@@ -8,7 +8,7 @@ const Footer = () => {
 		<footer className='footer'>
 			<div className='footer__inner container'>
 				<div className='footer__top'>
-					<div className='footer__requisites'>
+					<div className='footer__requisites text-sm'>
 						<p>{contactsData.company.name}</p>
 						<p>{contactsData.company.inn}</p>
 						<p>{contactsData.company.ogrn}</p>

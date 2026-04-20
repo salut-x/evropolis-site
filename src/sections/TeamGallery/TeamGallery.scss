@@ -1,0 +1,16 @@
+.team-gallery {
+
+  &__inner {
+    overflow: hidden;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    align-items: end;
+  }
+
+  &__image {
+    max-height: fluid-to-laptop(600, 450);
+  }
+}

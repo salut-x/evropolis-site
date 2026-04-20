@@ -55,7 +55,7 @@ const ProjectInfo = props => {
 								className='project-info__btn'
 								href={spec}
 								target='_blank'
-								label='Полная СПЕЦИФИКАЦИЯ'
+								label='Полная СПЕЦИФИКАЦИЯ (PDF)'
 								iconName='x-icon'
 								iconPosition='before'
 							/>

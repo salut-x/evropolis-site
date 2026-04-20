@@ -1,0 +1,63 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
+  padding: 16px fluid(24, 16);
+  background-color: var(--color-light);
+  border: 1px solid var(--color-gray-20);
+  border-radius: var(--border-radius-s);
+  transform: translateY(calc(100% + 16px));
+
+  @include tablet {
+    left: 16px;
+  }
+
+
+  @include mobile {
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: flex-start;
+  }
+
+  &__text {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 600px;
+  }
+
+  &__link {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--transition-duration);
+
+    @include hover {
+      color: var(--color-dark);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    flex-shrink: 0;
+  }
+
+  &__decline.button {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    border: var(--border-width-s) solid rgba(255, 255, 255, 0.2);
+
+    @include hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      color: var(--color-light);
+    }
+  }
+}

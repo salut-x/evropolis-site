@@ -6,7 +6,6 @@ import {
 	pluginImage,
 	pluginIsland,
 	pluginMdx,
-	pluginSearch,
 	pluginSprite,
 	pluginSsg,
 	pluginSvg
@@ -58,15 +57,15 @@ export default defineConfig(({ command, isSsrBuild }) => {
 					],
 					resolutions: [1, 2],
 					aspect: undefined,
-					format: 'inherit',
+					format: 'webp',
 					formatOptions: {},
-					quality: undefined,
+					quality: 80,
 					fit: 'cover',
 					position: 'centre',
 					background: undefined
 				},
 				decoding: 'async',
-				loading: 'eager'
+				loading: 'lazy'
 			}),
 
 			// assets.svgr → pluginSvg
@@ -99,23 +98,6 @@ export default defineConfig(({ command, isSsrBuild }) => {
 			pluginMdx({
 				remarkPlugins: [],
 				rehypePlugins: []
-			}),
-
-			// search → pluginSearch
-			pluginSearch({
-				include: ['**/*'],
-				exclude: ['/404'],
-				baseUrl: '',
-				trimTitle: '',
-				targetSelector: '[data-search]',
-				hit: {
-					minLength: 3,
-					number: false,
-					english: true,
-					hiragana: false,
-					katakana: true,
-					kanji: true
-				}
 			}),
 
 			// beautify → pluginBeautify

@@ -32,7 +32,8 @@
     border-bottom-color: var(--color-white);
   }
 
-  &:user-invalid {
+  &:user-invalid,
+  .is-field-error & {
     border-bottom-color: var(--color-red-45);
   }
     &:disabled {

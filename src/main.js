@@ -1,6 +1,7 @@
 import AboutCompanyText from '@/modules/AboutCompanyText.js'
-import TeamAnimation from './modules/TeamAnimation'
+import CookieBanner from '@/modules/CookieBanner'
 import InputMaskCollection from '@/modules/InputMaskCollection'
+import SupportForm from '@/modules/SupportForm'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from 'lenis'
@@ -17,6 +18,7 @@ import MenuModal from './modules/MenuModal'
 import PageLoadReveal from './modules/PageLoadReveal'
 import Preloader from './modules/Preloader'
 import ProjectHeroAnimation from './modules/ProjectHeroAnimation'
+import TeamAnimation from './modules/TeamAnimation'
 import TitleReveal from './modules/TitleReveal'
 import VideoModal from './modules/VideoModal'
 
@@ -39,7 +41,7 @@ if (typeof window !== 'undefined') {
 	lenis.on('scroll', ScrollTrigger.update)
 
 	new Preloader()
-	new HeroAnimation()
+	if (document.querySelector('.hero')) new HeroAnimation()
 	new ProjectHeroAnimation()
 	new AboutAnimation().init()
 
@@ -62,6 +64,7 @@ if (typeof window !== 'undefined') {
 	new TitleReveal().init()
 	new PageLoadReveal()
 	new VideoModal()
+	new CookieBanner()
 
 	document.querySelectorAll('[data-js-filter]').forEach(el => {
 		new FilterTabs(el)
@@ -69,6 +72,7 @@ if (typeof window !== 'undefined') {
 }
 
 new InputMaskCollection()
+new SupportForm()
 new AboutCompanyText()
 new HistorySlider()
 new TeamAnimation()

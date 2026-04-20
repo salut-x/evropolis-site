@@ -29,7 +29,7 @@ const ProjectGallery = props => {
 
 				<GalleryGrid images={galleryExterior} modifier='exterior' />
 
-				{galleryInterior.length > 0 && (
+				{/* {galleryInterior.length > 0 && (
 					<>
 						<div className='project-gallery__description'>
 							<h2 className='project-gallery__description-caption text-base'>
@@ -42,7 +42,7 @@ const ProjectGallery = props => {
 
 						<GalleryGrid images={galleryInterior} modifier='interior' />
 					</>
-				)}
+				)} */}
 
 			</div>
 		</section>

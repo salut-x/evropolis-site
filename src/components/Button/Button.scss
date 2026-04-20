@@ -3,6 +3,7 @@
   padding: fluid-to-laptop(16, 12);
   text-transform: uppercase;
   font-weight: 600;
+  font-size: fluid(18,14);
   border: none;
   border-radius: var(--border-radius-s);
   letter-spacing: -0.8px;
@@ -35,6 +36,16 @@
     color: var(--color-dark);
 
     @include hover {
+    background-color: var(--color-gray-20);
+    color: var(--color-dark);
+  }
+  }
+
+  &--ghost {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+
+      @include hover {
     background-color: var(--color-gray-20);
     color: var(--color-dark);
   }

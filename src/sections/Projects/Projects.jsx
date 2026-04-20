@@ -22,7 +22,7 @@ const Projects = () => {
 				<div className='projects__footer'>
 					<p className='projects__teaser text-lg'>
 						Строим дома, которые служат десятилетиями — потому что знаем,
-						как это делать правильно
+						как правильно это делать
 					</p>
 					<Button
 						href='/projects'

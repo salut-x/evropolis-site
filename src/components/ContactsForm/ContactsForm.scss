@@ -1,8 +1,25 @@
 .contacts-form {
-  display: flex;
-  flex-direction: column;
-  row-gap: fluid(40,24);
   width: 100%;
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(40,24);
+  }
+
+  &__message {
+    display: none;
+  }
+
+  &.is-submitted {
+    .contacts-form__fields { display: none; }
+    .contacts-form__message--success { display: block; }
+  }
+
+  &.is-error {
+    .contacts-form__fields { display: none; }
+    .contacts-form__message--error { display: block; }
+  }
 
   &__cell {
     &--actions {

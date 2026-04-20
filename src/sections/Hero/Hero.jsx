@@ -8,13 +8,10 @@ const Hero = () => {
 				<div className='hero__content'>
 					<h1 className='hero__title text-xl'>
 						<span className='reveal'>
-							<span className='reveal__inner'>Строим дома</span>
+							<span className='reveal__inner'>Строим каменные дома</span>
 						</span>
 						<span className='reveal'>
-							<span className='reveal__inner'>в Севастополе и Крыму.</span>
-						</span>
-						<span className='reveal'>
-							<span className='reveal__inner'>Без хаоса и сюрпризов</span>
+							<span className='reveal__inner'>в Севастополе и Крыму</span>
 						</span>
 					</h1>
 					<div className='hero__partners'>
@@ -40,14 +37,14 @@ const Hero = () => {
 				<div className='hero__midline-content'>
 					<div className='hero__midline-mask'>
 						<p className='hero__midline-item'>
-							Полный цикл от участка до мебели
+							Полный цикл работ
 						</p>
 					</div>
 					<div className='hero__midline-mask'>
 						<p className='hero__midline-item'>Фиксированная смета</p>
 					</div>
 					<div className='hero__midline-mask'>
-						<p className='hero__midline-item'>Чёткие сроки</p>
+						<p className='hero__midline-item'>Соблюдение сроков</p>
 					</div>
 					<div className='hero__midline-mask'>
 						<p className='hero__midline-item'>15 лет опыта</p>

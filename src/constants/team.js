@@ -15,13 +15,28 @@ export const TEAM = [
 		name: 'Полина Муравьёва'
 	},
 	{
+		srcImg: '/src/assets/images/team/m9.jpg',
+		role: 'Архитектор',
+		name: 'Ирина Казанова'
+	},
+	{
 		srcImg: '/src/assets/images/team/m4.jpg',
-		role: 'Экономист',
-		name: 'Наталья Блинова'
+		role: 'Главный инженер',
+		name: 'Иван Кривицкий'
 	},
 	{
 		srcImg: '/src/assets/images/team/m5.jpg',
 		role: 'Главный менеджер',
 		name: 'Максим Побережник'
+	},
+	{
+		srcImg: '/src/assets/images/team/m6.jpg',
+		role: 'Бухгалтер',
+		name: 'Светлана Острогляд'
+	},
+	{
+		srcImg: '/src/assets/images/team/m8.jpg',
+		role: 'Инженер мебельного производства',
+		name: 'Руслан Федорец'
 	}
 ]

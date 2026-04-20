@@ -1,5 +1,6 @@
 // src/layouts/index.jsx
 import { ContactsForm } from '@/components/ContactsForm'
+import { CookieBanner } from '@/components/CookieBanner'
 import { Icon } from '@/components/Icon'
 import { Preloader } from '@/components/Preloader'
 import '@/components/Preloader/Preloader.scss'
@@ -58,6 +59,7 @@ export default function (props) {
 			/>
 			<Content>{children}</Content>
 			<Footer />
+			<CookieBanner />
 
 			<dialog
 				className='cta-dialog'
