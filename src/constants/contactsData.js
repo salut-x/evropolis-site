@@ -19,9 +19,7 @@ export const contactsData = {
 		{ label: 'Контакты', href: '/contacts' }
 	],
 	externalLinks: [
-		{ label: 'Domclick', href: 'https://domclick.ru' },
-		{ label: 'Vk', href: 'https://vk.com' },
-		{ label: 'Telegram', href: 'https://t.me' },
-		{ label: 'Youtube', href: 'https://youtube.com' }
+		{ label: 'Domclick', href: 'https://sevastopol.domclick.ru/stroitelstvo-domov/homeland-projects/ip-kulikov-aleksei-aleksandrovich_319467' },
+		{ label: 'Vk', href: 'https://vk.ru/evropolis_stroitelstvo_i_remont' },
 	]
 }

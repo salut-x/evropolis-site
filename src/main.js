@@ -19,7 +19,7 @@ import MenuModal from './modules/MenuModal'
 import PageLoadReveal from './modules/PageLoadReveal'
 import Preloader from './modules/Preloader'
 import ProjectHeroAnimation from './modules/ProjectHeroAnimation'
-// import TeamAnimation from './modules/TeamAnimation'
+import TeamAnimation from './modules/TeamAnimation'
 import TitleReveal from './modules/TitleReveal'
 import VideoModal from './modules/VideoModal'
 
@@ -77,4 +77,4 @@ new SupportForm()
 new AboutCompanyText()
 new HistorySlider()
 new TeamGallerySlider()
-// new TeamAnimation()
+new TeamAnimation()

@@ -1,14 +1,14 @@
 import './TeamGallery.scss'
 
 const images = [
-	'/src/assets/images/team-gallery/2.jpg',
-	'/src/assets/images/team-gallery/3.jpg',
-	'/src/assets/images/team-gallery/1.jpg',
+	'/src/assets/images/team-gallery/2.webp',
+	'/src/assets/images/team-gallery/3.webp',
+	'/src/assets/images/team-gallery/1.webp'
 ]
 
 const TeamGallery = () => {
 	return (
-		<section className='team-gallery'>
+		<section className='team-gallery section'>
 			<div className='team-gallery__inner'>
 				<div
 					className='team-gallery__grid swiper'

@@ -82,7 +82,7 @@ const Footer = () => {
 						/>
 					</div>
 					<a
-						href='https://pines.agency'
+						href='https://t.me/salutlazar'
 						className='footer__credits'
 						target='_blank'
 					>

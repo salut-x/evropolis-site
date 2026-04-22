@@ -3,39 +3,43 @@ export const PROJECTS = [
 		id: 1,
 		slug: 'ipetri',
 		href: '/projects/ipetri',
-		srcImg: '/src/assets/images/projects/ipetri/cover.jpg',
+		srcImg: '/src/assets/images/projects/ipetri/cover.webp',
 		title: 'Проект «Ай-Петри»',
 		category: 'Индивидуальный проект',
 		categoryKey: 'individual',
-		square: 120,
+		square: 115,
 
 		// Для страницы проекта
 		tags: [
 			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
+			{ label: 'Площадь', value: '115 м²' },
 			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Срок выполнения', value: '10 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Двухэтажный дом в современном стиле с просторными кухнями-гостиными на каждом этаже, балконами и террасой. Чёткие линии, большое остекление и лаконичный фасад делают проект стильным и функциональным решением для семьи.',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Площадь застройки 81 м², высота потолков 3 м; жилая площадь 1 этаж — 63,07 м², 2 этаж — 51,87 м², терраса 22,65 м², балконы 16,56 и 6,20 м²',
+			'Ленточный фундамент с гидроизоляцией битумной мастикой; ж/б плита 100 мм, бетон М250',
+			'Колонны 300×300 мм: арматура Ф16, бетон М300 (оба этажа)',
+			'Наружные стены 300 мм из газоблока D500, внутренние 200/100 мм из газоблока D500',
+			'Плита перекрытия 200 мм: арматура Ф12, шаг 200×200 мм, бетон М300',
+			'Кровля: битумная черепица Шинглас Кантри, утепление минватой, парогидроветрозащитная мембрана',
+			'Окна: семикамерный профиль 70 мм, стеклопакет 32 мм, мультифункциональное стекло',
+			'Фасад: утепление минватой Технофас 50 мм, декоративная штукатурка (короед/шуба), силикон-акриловая краска'
 		],
-		price: '2 343 000 руб*',
+		price: '8 812 732 руб*',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/QdB71LPLbKWAZQ',
 		descriptionInterior:
 			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
 		galleryExterior: [
-			'/src/assets/images/projects/ipetri/1.jpg',
-			'/src/assets/images/projects/ipetri/2.jpg',
-			'/src/assets/images/projects/ipetri/3.jpg',
-			'/src/assets/images/projects/ipetri/4.jpg',
-			'/src/assets/images/projects/ipetri/5.jpg',
-			'/src/assets/images/projects/ipetri/6.jpg'
+			'/src/assets/images/projects/ipetri/1.webp',
+			'/src/assets/images/projects/ipetri/2.webp',
+			'/src/assets/images/projects/ipetri/3.webp',
+			'/src/assets/images/projects/ipetri/4.webp',
+			'/src/assets/images/projects/ipetri/5.webp',
+			'/src/assets/images/projects/ipetri/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -48,39 +52,42 @@ export const PROJECTS = [
 		id: 2,
 		slug: 'salgir',
 		href: '/projects/salgir',
-		srcImg: '/src/assets/images/projects/salgir/cover.jpg',
+		srcImg: '/src/assets/images/projects/salgir/cover.webp',
 		title: 'Проект «Салгир»',
-		category: 'Индивидуальный проект',
-		categoryKey: 'individual',
-		square: 240,
+		category: 'Типовой проект',
+		categoryKey: 'typical',
+		square: 112,
 
 		// Для страницы проекта
 		tags: [
-			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
+			{ label: 'Тип проекта', value: 'Типовой' },
+			{ label: 'Площадь', value: '112 м²' },
 			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Срок выполнения', value: '9 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Одноэтажный дом в классическом стиле с вальмовой кровлей, крытой верандой и тёплым двухтонным фасадом. Просторная планировка с акцентом на комфорт семьи и связь жилого пространства с садом.',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Площадь застройки 141 м², высота потолков 3 м',
+			'Ленточный фундамент с гидроизоляцией битумной мастикой; ж/б плита 100 мм, бетон М250',
+			'Колонны 300×300 мм: арматура Ф16, бетон М300',
+			'Наружные стены 300 мм из газоблока D500, внутренние 200/100 мм из газоблока D500',
+			'Кровля: битумная черепица Технониколь, утепление минватой, парогидроветрозащитная мембрана',
+			'Окна: семикамерный профиль 70 мм, стеклопакет 32 мм, мультифункциональное стекло',
+			'Фасад: утепление минватой Технофас 50 мм, декоративная штукатурка (короед/шуба), силикон-акриловая краска'
 		],
-		price: '2 343 000 руб*',
+		price: '8 231 742 руб*',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/R8cjL8jGqYkmhQ',
 		descriptionInterior:
 			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
 		galleryExterior: [
-			'/src/assets/images/projects/salgir/1.jpg',
-			'/src/assets/images/projects/salgir/2.jpg',
-			'/src/assets/images/projects/salgir/3.jpg',
-			'/src/assets/images/projects/salgir/4.jpg',
-			'/src/assets/images/projects/salgir/5.jpg',
-			'/src/assets/images/projects/salgir/6.jpg'
+			'/src/assets/images/projects/salgir/1.webp',
+			'/src/assets/images/projects/salgir/2.webp',
+			'/src/assets/images/projects/salgir/3.webp',
+			'/src/assets/images/projects/salgir/4.webp',
+			'/src/assets/images/projects/salgir/5.webp',
+			'/src/assets/images/projects/salgir/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -93,38 +100,41 @@ export const PROJECTS = [
 		id: 3,
 		slug: 'kazbek',
 		href: '/projects/kazbek',
-		srcImg: '/src/assets/images/projects/kazbek/cover.jpg',
+		srcImg: '/src/assets/images/projects/kazbek/cover.webp',
 		title: 'Проект «Казбек»',
-		category: 'Типовой проект',
-		categoryKey: 'typical',
-		square: 240,
+		category: 'Индивидуальный проект',
+		categoryKey: 'individual',
+		square: 85,
 
 		tags: [
 			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
+			{ label: 'Площадь', value: '85 м²' },
 			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Срок выполнения', value: '10 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Одноэтажный дом в современном стиле с двускатной кровлей, панорамным остеклением и открытой террасой. Деревянные акценты на фасаде органично вписывают дом в природный ландшафт.',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Площадь застройки 100,8 м², высота потолков 3 м',
+			'Ленточный фундамент с гидроизоляцией битумной мастикой; ж/б плита 100 мм, бетон М250',
+			'Колонны 300×300 мм: арматура Ф16, бетон М300',
+			'Наружные стены 300 мм из газоблока D500, внутренние 200/100 мм из газоблока D500',
+			'Кровля: битумная черепица Технониколь, утепление минватой, парогидроветрозащитная мембрана',
+			'Окна: семикамерный профиль 70 мм, стеклопакет 32 мм, мультифункциональное стекло',
+			'Фасад: утепление минватой Технофас 50 мм, декоративная штукатурка (короед/шуба), силикон-акриловая краска, декоративные инсталляции по желанию заказчика'
 		],
-		price: '2 343 000 руб*',
+		price: ' 7 674 837 руб*',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/HZBZh71pgdXYWw',
 		descriptionInterior:
 			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
 		galleryExterior: [
-			'/src/assets/images/projects/kazbek/1.jpg',
-			'/src/assets/images/projects/kazbek/2.jpg',
-			'/src/assets/images/projects/kazbek/3.jpg',
-			'/src/assets/images/projects/kazbek/4.jpg',
-			'/src/assets/images/projects/kazbek/5.jpg',
-			'/src/assets/images/projects/kazbek/6.jpg'
+			'/src/assets/images/projects/kazbek/1.webp',
+			'/src/assets/images/projects/kazbek/2.webp',
+			'/src/assets/images/projects/kazbek/3.webp',
+			'/src/assets/images/projects/kazbek/4.webp',
+			'/src/assets/images/projects/kazbek/5.webp',
+			'/src/assets/images/projects/kazbek/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -137,38 +147,43 @@ export const PROJECTS = [
 		id: 4,
 		slug: 'peschanoe',
 		href: '/projects/peschanoe',
-		srcImg: '/src/assets/images/projects/peschanoe/cover.jpg',
+		srcImg: '/src/assets/images/projects/peschanoe/cover.webp',
 		title: 'Проект «Песчаное»',
 		category: 'Индивидуальный проект',
 		categoryKey: 'individual',
-		square: 240,
+		square: 175,
 
 		tags: [
 			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
-			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Площадь', value: '175 м²' },
+			{ label: 'Год', value: '2025' },
+			{ label: 'Срок выполнения', value: '14 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Двухэтажный дом в современном стиле с двускатной кровлей, панорамным остеклением и просторной террасой 31,5 м². Деревянные акценты планкена на фасаде, балкон со стеклянным ограждением и двухсветные пространства в кабинете и главной спальне делают проект особенно выразительным.',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Площадь застройки 114,32 м², общая площадь 174,25 м², строительный объём 585,03 м³',
+			'Высота потолков: 1 этаж — 2,85 м, 2 этаж — 2,7 м',
+			'Жилая площадь 1 этажа — 90,99 м² (прихожая, холл, спальня, кухня-гостиная, котельная, гардероб и др.), 2 этажа — 83,26 м² (3 спальни, кабинет, 2 санузла, 2 гардероба)',
+			'Фундамент: ж/б монолитная плита 10 500×11 600 мм',
+			'Наружные стены: известняк-ракушечник 400 мм + базальтовый утеплитель 50 мм + штукатурка',
+			'Перегородки: газобетонные блоки 100 и 200 мм',
+			'Кровля: гибкая битумная черепица, стропила из деревянного бруса 50×200 мм',
+			'Окна: ПВХ с двойными стеклопакетами',
+			'Фасад: штукатурка с акриловой краской, планкен/морозостойкий керамогранит под дерево, декоративный кирпич на цоколе'
 		],
-		price: '2 343 000 руб*',
+		price: '',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/2FnXjv2bl2kZGA',
 		descriptionInterior:
 			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
 		galleryExterior: [
-			'/src/assets/images/projects/peschanoe/1.jpg',
-			'/src/assets/images/projects/peschanoe/2.jpg',
-			'/src/assets/images/projects/peschanoe/3.jpg',
-			'/src/assets/images/projects/peschanoe/4.jpg',
-			'/src/assets/images/projects/peschanoe/5.jpg',
-			'/src/assets/images/projects/peschanoe/6.jpg'
+			'/src/assets/images/projects/peschanoe/1.webp',
+			'/src/assets/images/projects/peschanoe/2.webp',
+			'/src/assets/images/projects/peschanoe/3.webp',
+			'/src/assets/images/projects/peschanoe/4.webp',
+			'/src/assets/images/projects/peschanoe/5.webp',
+			'/src/assets/images/projects/peschanoe/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -181,38 +196,42 @@ export const PROJECTS = [
 		id: 5,
 		href: '/projects/elbrus',
 		slug: 'elbrus',
-		srcImg: '/src/assets/images/projects/elbrus/cover.jpg',
+		srcImg: '/src/assets/images/projects/elbrus/cover.webp',
 		title: 'Проект «Эльбрус»',
-		category: 'Индивидуальный проект',
-		categoryKey: 'individual',
-		square: 240,
+		category: 'Типовой проект',
+		categoryKey: 'typical',
+		square: 96,
 
 		tags: [
-			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
-			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Тип проекта', value: 'Типовой' },
+			{ label: 'Площадь', value: '96 м²' },
+			{ label: 'Год', value: '2025' },
+			{ label: 'Срок выполнения', value: '10 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Двухэтажный дом в современном стиле с выразительной двускатной кровлей, панорамным остеклением фронтона и деревянными акцентами на фасаде. Смелое сочетание высоких окон и тёмной кровли придаёт дому характерный скандинавский облик.',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
+			'Ленточный фундамент с гидроизоляцией битумной мастикой; ж/б плита 100 мм, бетон М250',
+			'Колонны 300×300 мм: арматура Ф16, бетон М300 (оба этажа)',
 			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Наружные стены 300 мм из газоблока D500, внутренние 200/100 мм из газоблока D500',
+			'Плита перекрытия 200 мм: арматура Ф12, шаг 200×200 мм, бетон М300',
+			'Кровля: битумная черепица Шинглас Кантри, утепление минватой, парогидроветрозащитная мембрана',
+			'Окна: семикамерный профиль 70 мм, стеклопакет 32 мм, мультифункциональное стекло',
+			'Фасад: утепление минватой Технофас 50 мм, декоративная штукатурка (короед/шуба), силикон-акриловая краска, декоративные инсталляции по желанию заказчика'
 		],
-		price: '2 343 000 руб*',
+		price: '8 999 023 руб*',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/27rM-QkOcorBYA',
 		descriptionInterior:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Двухэтажный дом в современном стиле с выразительной двускатной кровлей, панорамным остеклением фронтона и деревянными акцентами на фасаде. Смелое сочетание высоких окон и тёмной кровли придаёт дому характерный скандинавский облик.',
 		galleryExterior: [
-			'/src/assets/images/projects/elbrus/1.jpg',
-			'/src/assets/images/projects/elbrus/2.jpg',
-			'/src/assets/images/projects/elbrus/3.jpg',
-			'/src/assets/images/projects/elbrus/4.jpg',
-			'/src/assets/images/projects/elbrus/5.jpg',
-			'/src/assets/images/projects/elbrus/6.jpg'
+			'/src/assets/images/projects/elbrus/1.webp',
+			'/src/assets/images/projects/elbrus/2.webp',
+			'/src/assets/images/projects/elbrus/3.webp',
+			'/src/assets/images/projects/elbrus/4.webp',
+			'/src/assets/images/projects/elbrus/5.webp',
+			'/src/assets/images/projects/elbrus/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -223,40 +242,44 @@ export const PROJECTS = [
 	},
 	{
 		id: 6,
-		href: '/projects/klaus',
+		href: '/projects/kalaus',
 		slug: 'klaus',
-		srcImg: '/src/assets/images/projects/klaus/cover.jpg',
-		title: 'Проект «Клаус»',
+		srcImg: '/src/assets/images/projects/kalaus/cover.webp',
+		title: 'Проект «Калаус»',
 		category: 'Индивидуальный проект',
 		categoryKey: 'individual',
-		square: 240,
+		square: 125,
 
 		tags: [
 			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
-			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Площадь', value: '125 м²' },
+			{ label: 'Год', value: '2026' },
+			{ label: 'Срок выполнения', value: '10 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Двухэтажный дом в классическом стиле с вальмовой кровлей, симметричным фасадом и представительным входом. Строгие пропорции и светлая штукатурка придают дому элегантный и сдержанный облик.',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Площадь застройки 84,41 м², высота потолков 3 м',
+			'Ленточный фундамент с гидроизоляцией битумной мастикой; ж/б плита 100 мм, бетон М250',
+			'Колонны 300×300 мм: арматура Ф16, бетон М300 (оба этажа)',
+			'Наружные стены 300 мм из газоблока D500, внутренние 200/100 мм из газоблока D500',
+			'Плита перекрытия 200 мм: арматура Ф12, шаг 200×200 мм, бетон М300',
+			'Кровля: битумная черепица Шинглас Кантри, утепление минватой, парогидроветрозащитная мембрана',
+			'Окна: семикамерный профиль 70 мм, стеклопакет 32 мм, мультифункциональное стекло',
+			'Фасад: утепление минватой Технофас 50 мм, декоративная штукатурка (короед/шуба), силикон-акриловая краска, декоративные инсталляции по желанию заказчика'
 		],
-		price: '2 343 000 руб*',
+		price: '9 171 865 руб*',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/fig9nAbbNpKHgA',
 		descriptionInterior:
 			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
 		galleryExterior: [
-			'/src/assets/images/projects/klaus/1.jpg',
-			'/src/assets/images/projects/klaus/2.jpg',
-			'/src/assets/images/projects/klaus/3.jpg',
-			'/src/assets/images/projects/klaus/4.jpg',
-			'/src/assets/images/projects/klaus/5.jpg',
-			'/src/assets/images/projects/klaus/6.jpg'
+			'/src/assets/images/projects/kalaus/1.webp',
+			'/src/assets/images/projects/kalaus/2.webp',
+			'/src/assets/images/projects/kalaus/3.webp',
+			'/src/assets/images/projects/kalaus/4.webp',
+			'/src/assets/images/projects/kalaus/5.webp',
+			'/src/assets/images/projects/kalaus/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -269,38 +292,41 @@ export const PROJECTS = [
 		id: 7,
 		slug: 'dogma',
 		href: '/projects/dogma',
-		srcImg: '/src/assets/images/projects/dogma/cover.jpg',
+		srcImg: '/src/assets/images/projects/dogma/cover.webp',
 		title: 'Проект «Догма»',
-		category: 'Индивидуальный проект',
-		categoryKey: 'individual',
-		square: 120,
+		category: 'Типовой проект',
+		categoryKey: 'typical',
+		square: 70,
 
 		tags: [
-			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
-			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Тип проекта', value: 'Типовой' },
+			{ label: 'Площадь', value: '70 м²' },
+			{ label: 'Год', value: '2025' },
+			{ label: 'Срок выполнения', value: '9 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Одноэтажный дом в современном стиле с плоской кровлей, акцентом на большое остекление и лаконичный фасад с декоративными вставками. Открытое центральное пространство наполняет дом светом и воздухом. ',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Площадь застройки 81 м², высота потолков 3 м',
+			'Ленточный фундамент с гидроизоляцией битумной мастикой; ж/б плита 100 мм, бетон М250',
+			'Колонны 300×300 мм: арматура Ф16, бетон М300',
+			'Наружные стены 300 мм из газоблока D500, внутренние 200/100 мм из газоблока D500',
+			'Кровля: битумная черепица Технониколь, утепление минватой, парогидроветрозащитная мембрана',
+			'Окна: семикамерный профиль 70 мм, стеклопакет 32 мм, мультифункциональное стекло',
+			'Фасад: утепление минватой Технофас 50 мм, декоративная штукатурка (короед/шуба), силикон-акриловая краска'
 		],
-		price: '2 343 000 руб*',
+		price: '8 669 224 руб*',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/yajzGGxqgwIN1g',
 		descriptionInterior:
 			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
 		galleryExterior: [
-			'/src/assets/images/projects/dogma/1.jpg',
-			'/src/assets/images/projects/dogma/2.jpg',
-			'/src/assets/images/projects/dogma/3.jpg',
-			'/src/assets/images/projects/dogma/4.jpg',
-			'/src/assets/images/projects/dogma/5.jpg',
-			'/src/assets/images/projects/dogma/6.jpg'
+			'/src/assets/images/projects/dogma/1.webp',
+			'/src/assets/images/projects/dogma/2.webp',
+			'/src/assets/images/projects/dogma/3.webp',
+			'/src/assets/images/projects/dogma/4.webp',
+			'/src/assets/images/projects/dogma/5.webp',
+			'/src/assets/images/projects/dogma/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -313,38 +339,41 @@ export const PROJECTS = [
 		id: 8,
 		slug: 'dulber',
 		href: '/projects/dulber',
-		srcImg: '/src/assets/images/projects/dulber/cover.jpg',
+		srcImg: '/src/assets/images/projects/dulber/cover.webp',
 		title: 'Проект «Дюльбер»',
-		category: 'Типовой проект',
-		categoryKey: 'typical',
-		square: 240,
+		category: 'Индивидуальный проект',
+		categoryKey: 'individual',
+		square: 112,
 
 		tags: [
 			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
+			{ label: 'Площадь', value: '112 м²' },
 			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Срок выполнения', value: '9 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Одноэтажный дом в классическом стиле с вальмовой кровлей, кирпичными акцентами на фасаде и просторным крытым входом. Открытое центральное пространство наполняет дом естественным светом.',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Площадь застройки 114 м², высота потолков 3 м',
+			'Ленточный фундамент с гидроизоляцией битумной мастикой; ж/б плита 100 мм, бетон М250',
+			'Колонны 300×300 мм: арматура Ф16, бетон М300',
+			'Наружные стены 300 мм из газоблока D500, внутренние 200/100 мм из газоблока D500',
+			'Кровля: битумная черепица Технониколь, утепление минватой, парогидроветрозащитная мембрана',
+			'Окна: семикамерный профиль 70 мм, стеклопакет 32 мм, мультифункциональное стекло',
+			'Фасад: утепление минватой Технофас 50 мм, декоративная штукатурка (короед/шуба), силикон-акриловая краска'
 		],
-		price: '2 343 000 руб*',
+		price: ' 7 790 863 руб*',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/7k5KcOilbYlzDQ',
 		descriptionInterior:
 			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
 		galleryExterior: [
-			'/src/assets/images/projects/dulber/1.jpg',
-			'/src/assets/images/projects/dulber/2.jpg',
-			'/src/assets/images/projects/dulber/3.jpg',
-			'/src/assets/images/projects/dulber/4.jpg',
-			'/src/assets/images/projects/dulber/5.jpg',
-			'/src/assets/images/projects/dulber/6.jpg'
+			'/src/assets/images/projects/dulber/1.webp',
+			'/src/assets/images/projects/dulber/2.webp',
+			'/src/assets/images/projects/dulber/3.webp',
+			'/src/assets/images/projects/dulber/4.webp',
+			'/src/assets/images/projects/dulber/5.webp',
+			'/src/assets/images/projects/dulber/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -357,38 +386,41 @@ export const PROJECTS = [
 		id: 9,
 		slug: 'klevernaya',
 		href: '/projects/klevernaya',
-		srcImg: '/src/assets/images/projects/klevernaya/cover.jpg',
+		srcImg: '/src/assets/images/projects/klevernaya/cover.webp',
 		title: 'Проект «Клеверная»',
 		category: 'Типовой проект',
 		categoryKey: 'typical',
-		square: 240,
+		square: 84,
 
 		tags: [
-			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
+			{ label: 'Тип проекта', value: 'Типовой' },
+			{ label: 'Площадь', value: '84 м²' },
 			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Срок выполнения', value: '9 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Одноэтажный дом в современном стиле с двускатной кровлей, крытой верандой на металлических опорах и уютными цветочными нишами под окнами. Светлый фасад с деревянными акцентами органично вписывается в природное окружение.',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Площадь застройки 95,7 м², высота потолков 3 м',
+			'Ленточный фундамент с гидроизоляцией битумной мастикой; ж/б плита 100 мм, бетон М250',
+			'Колонны 300×300 мм: арматура Ф16, бетон М300',
+			'Наружные стены 300 мм из газоблока D500, внутренние 200/100 мм из газоблока D500',
+			'Кровля: битумная черепица Технониколь, утепление минватой, парогидроветрозащитная мембрана',
+			'Окна: семикамерный профиль 70 мм, стеклопакет 32 мм, мультифункциональное стекло',
+			'Фасад: утепление минватой Технофас 50 мм, декоративная штукатурка (короед/шуба), силикон-акриловая краска'
 		],
-		price: '2 343 000 руб*',
+		price: '6 869 833 руб*',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/yLWq8Und8hnF6g',
 		descriptionInterior:
 			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
 		galleryExterior: [
-			'/src/assets/images/projects/klevernaya/1.jpg',
-			'/src/assets/images/projects/klevernaya/2.jpg',
-			'/src/assets/images/projects/klevernaya/3.jpg',
-			'/src/assets/images/projects/klevernaya/4.jpg',
-			'/src/assets/images/projects/klevernaya/5.jpg',
-			'/src/assets/images/projects/klevernaya/6.jpg'
+			'/src/assets/images/projects/klevernaya/1.webp',
+			'/src/assets/images/projects/klevernaya/2.webp',
+			'/src/assets/images/projects/klevernaya/3.webp',
+			'/src/assets/images/projects/klevernaya/4.webp',
+			'/src/assets/images/projects/klevernaya/5.webp',
+			'/src/assets/images/projects/klevernaya/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -401,38 +433,41 @@ export const PROJECTS = [
 		id: 10,
 		slug: 'urozhainoe',
 		href: '/projects/urozhainoe',
-		srcImg: '/src/assets/images/projects/urozhainoe/cover.jpg',
+		srcImg: '/src/assets/images/projects/urozhainoe/cover.webp',
 		title: 'Проект «Урожайное»',
-		category: 'Индивидуальный проект',
-		categoryKey: 'individual',
-		square: 240,
+		category: 'Типовой проект',
+		categoryKey: 'typical',
+		square: 84,
 
 		tags: [
-			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
-			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Тип проекта', value: 'Типовой' },
+			{ label: 'Площадь', value: '84 м²' },
+			{ label: 'Год', value: '2025' },
+			{ label: 'Срок выполнения', value: '9 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Одноэтажный дом в современном стиле с вальмовой кровлей и панорамным остеклением фасада. Лаконичный белый фасад с тёмными оконными рамами создаёт свежий и выразительный облик.',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Площадь застройки 95,7 м², высота потолков 3 м',
+			'Ленточный фундамент с гидроизоляцией битумной мастикой; ж/б плита 100 мм, бетон М250',
+			'Колонны 300×300 мм: арматура Ф16, бетон М300',
+			'Наружные стены 300 мм из газоблока D500, внутренние 200/100 мм из газоблока D500',
+			'Кровля: битумная черепица Технониколь, утепление минватой, парогидроветрозащитная мембрана',
+			'Окна: семикамерный профиль 70 мм, стеклопакет 32 мм, мультифункциональное стекло',
+			'Фасад: утепление минватой Технофас 50 мм, декоративная штукатурка (короед/шуба), силикон-акриловая краска'
 		],
-		price: '2 343 000 руб*',
+		price: '6 512 922  руб*',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/ALcEY7n-m5vASA',
 		descriptionInterior:
 			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
 		galleryExterior: [
-			'/src/assets/images/projects/urozhainoe/1.jpg',
-			'/src/assets/images/projects/urozhainoe/2.jpg',
-			'/src/assets/images/projects/urozhainoe/3.jpg',
-			'/src/assets/images/projects/urozhainoe/4.jpg',
-			'/src/assets/images/projects/urozhainoe/5.jpg',
-			'/src/assets/images/projects/urozhainoe/6.jpg'
+			'/src/assets/images/projects/urozhainoe/1.webp',
+			'/src/assets/images/projects/urozhainoe/2.webp',
+			'/src/assets/images/projects/urozhainoe/3.webp',
+			'/src/assets/images/projects/urozhainoe/4.webp',
+			'/src/assets/images/projects/urozhainoe/5.webp',
+			'/src/assets/images/projects/urozhainoe/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -445,38 +480,42 @@ export const PROJECTS = [
 		id: 11,
 		slug: 'altai',
 		href: '/projects/altai',
-		srcImg: '/src/assets/images/projects/altai/cover.jpg',
+		srcImg: '/src/assets/images/projects/altai/cover.webp',
 		title: 'Проект «Алтай»',
-		category: 'Индивидуальный проект',
-		categoryKey: 'individual',
-		square: 240,
+		category: 'Типовой проект',
+		categoryKey: 'typical',
+		square: 110,
 
 		tags: [
-			{ label: 'Тип проекта', value: 'Индивидуальный' },
-			{ label: 'Площадь', value: '120 м²' },
+			{ label: 'Тип проекта', value: 'Типовой' },
+			{ label: 'Площадь', value: '110 м²' },
 			{ label: 'Год', value: '2024' },
-			{ label: 'Срок выполнения', value: '18 месяцев' }
+			{ label: 'Срок выполнения', value: '10 месяцев' }
 		],
 		description:
-			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
+			'Современный одноэтажный дом с акцентом на открытое пространство, большое остекление и просторную террасу, связывающую интерьер с природой.',
 		specs: [
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Монолитный ленточный фундамент с гидроизоляцией',
-			'Надёжный каркас: колонны, балки и плиты перекрытия 200 мм',
-			'Наружные стены 300 мм из газоблока D500'
+			'Площадь застройки 130 м², высота потолков 3 м, жилая площадь 110,26 м²',
+			'Ленточный фундамент с гидроизоляцией битумной мастикой',
+			'Железобетонная плита перекрытия 100 мм, бетон М250',
+			'Колонны 300×300 мм, бетон М300',
+			'Наружные стены 300 мм из газоблока D500',
+			'Кровля: битумная черепица Технониколь, утепление минватой',
+			'Окна: семикамерный профиль 70 мм, стеклопакет 32 мм',
+			'Фасад: утепление минватой 50 мм, декоративная штукатурка'
 		],
-		price: '2 343 000 руб*',
+		price: '8 181 272 руб*',
 		video: 'https://www.youtube.com/embed/shotcE73Vns?si=AMK_7nsPGyaBR95h',
-		spec: '/files/ipetri-spec.pdf',
+		spec: 'https://disk.yandex.ru/i/NoDdtU3KETH_KQ',
 		descriptionInterior:
 			'Этот энергоэффективный дом в Севастополе воплощает принципы современного устойчивого строительства, адаптированные к уникальному климату черноморского побережья',
 		galleryExterior: [
-			'/src/assets/images/projects/altai/1.jpg',
-			'/src/assets/images/projects/altai/2.jpg',
-			'/src/assets/images/projects/altai/3.jpg',
-			'/src/assets/images/projects/altai/4.jpg',
-			'/src/assets/images/projects/altai/5.jpg',
-			'/src/assets/images/projects/altai/6.jpg'
+			'/src/assets/images/projects/altai/1.webp',
+			'/src/assets/images/projects/altai/2.webp',
+			'/src/assets/images/projects/altai/3.webp',
+			'/src/assets/images/projects/altai/4.webp',
+			'/src/assets/images/projects/altai/5.webp',
+			'/src/assets/images/projects/altai/6.webp'
 		],
 		galleryInterior: [
 			'/src/assets/images/projects/ipetri/7.jpg',
@@ -484,6 +523,5 @@ export const PROJECTS = [
 			'/src/assets/images/projects/ipetri/9.jpg',
 			'/src/assets/images/projects/ipetri/10.jpg'
 		]
-	},
-
+	}
 ]

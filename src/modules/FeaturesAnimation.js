@@ -3,8 +3,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Swiper from 'swiper'
 import 'swiper/css'
 
-gsap.registerPlugin(ScrollTrigger)
-
 export default class FeaturesAnimation {
 	selectors = {
 		root: '[data-js-features]',

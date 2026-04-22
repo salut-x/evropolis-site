@@ -1,8 +1,6 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger)
-
 export default class AboutAnimation {
 	init() {
 		if (document.querySelector('.about-company')) {

@@ -21,7 +21,7 @@ const About = () => {
 				<div className='section__body about__content'>
 					<div class='about__image'>
 						<img
-							src='/src/assets/images/about/1.jpg'
+							src='/src/assets/images/about/1.webp'
 							alt='Дом'
 							class='about__img'
 							width={448}
