@@ -7,20 +7,33 @@ const ContactsForm = () => {
 	return (
 		<form
 			className='contacts-form'
-			action=''
+			action='/send.php'
+			method='POST'
 			data-js-support-form
 			noValidate
 		>
+			{/* Honeypot — скрыто от людей, боты заполняют */}
+			<input
+				type='text'
+				name='website'
+				tabIndex='-1'
+				autoComplete='off'
+				aria-hidden='true'
+				style={{ display: 'none' }}
+			/>
+
 			<div className='contacts-form__fields'>
 				<Field
 					className='contacts-form__cell'
 					label='Имя и фамилия'
+					name='full_name'
 					placeholder='Иван Иванов'
 					isRequired
 				/>
 				<Field
 					className='contacts-form__cell'
 					label='Телефон'
+					name='phone'
 					placeholder='Номер телефона*'
 					inputMode='tel'
 					mask='+7(000) 000-00-00'
@@ -29,6 +42,7 @@ const ContactsForm = () => {
 				<Field
 					className='contacts-form__cell'
 					label='Комментарий'
+					name='message'
 					type='textarea'
 					placeholder='Расскажите о проекте'
 				/>
@@ -36,6 +50,7 @@ const ContactsForm = () => {
 					<Checkbox
 						className='contacts-form__agreement'
 						label='Даю согласие на рекламные рассылки'
+						name='consent_marketing'
 						isRequired
 					/>
 					<Button
@@ -46,13 +61,14 @@ const ContactsForm = () => {
 					/>
 					<p className='contacts-form__agreement contacts-form__agreement--secondary text-sm'>
 						Нажимая кнопку , я даю согласие на{' '}
-						<a href='#'>обработку персональных данных</a>
+						<a href='/policy.pdf' target='_blank'>обработку персональных данных</a>
 					</p>
 				</div>
 			</div>
 
 			<div className='contacts-form__message contacts-form__message--success' aria-live='polite'>
-				<p>Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+				<p>Заявка отправлена! Мы свяжемся с вами в ближайшее время.
+</p>
 			</div>
 
 			<div className='contacts-form__message contacts-form__message--error' aria-live='polite'>

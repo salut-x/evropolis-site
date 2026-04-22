@@ -49,10 +49,8 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    row-gap: 16px;
-    justify-content: space-between;
-    flex: 1;
-    // margin-top: fluid(40, 32);
+    row-gap: 64px;
+    min-height: 0;
   }
 
   &__header {
@@ -69,6 +67,5 @@
 
   &__subtitle {
     color: var(--color-gray-60);
-    max-width: 340px;
   }
 }

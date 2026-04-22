@@ -8,6 +8,7 @@ const Field = props => {
 
 		label,
 		id = getIdFromTitle(props.label),
+		name,
 		/**
 		 * undefined (default) | 'email | 'textarea'
 		 */
@@ -46,6 +47,7 @@ const Field = props => {
 				<Component
 					className='field__control text-base'
 					id={id}
+					name={name}
 					type={type}
 					placeholder={placeholder}
 					required={isRequired}

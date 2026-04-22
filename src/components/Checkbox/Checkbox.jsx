@@ -7,6 +7,7 @@ const Checkbox = props => {
 		className,
 		label,
 		id = getIdFromTitle(props.label),
+		name,
 		isRequired
 	} = props
 	return (
@@ -18,6 +19,7 @@ const Checkbox = props => {
 				type='checkbox'
 				className='checkbox__input'
 				id={id}
+				name={name}
 				required={isRequired}
 			/>
 			<span

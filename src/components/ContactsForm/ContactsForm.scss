@@ -13,12 +13,25 @@
 
   &.is-submitted {
     .contacts-form__fields { display: none; }
-    .contacts-form__message--success { display: block; }
+    .contacts-form__message--success {
+      align-self: flex-start;
+      display: flex;
+      background: #00C851;
+      color: var(--color-light);
+      border-radius: var(--border-radius-s);
+      padding: fluid(16, 8);
+    }
   }
 
   &.is-error {
     .contacts-form__fields { display: none; }
-    .contacts-form__message--error { display: block; }
+    .contacts-form__message--error {
+      display: flex;
+      background: var(--color-red-45);
+      border-radius: var(--border-radius-s);
+      color: var(--color-light);
+      padding: fluid(16, 8);
+     }
   }
 
   &__cell {

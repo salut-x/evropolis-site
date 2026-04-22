@@ -80,7 +80,7 @@ export default function (props) {
 					<div className='cta-dialog__header'>
 						<h2 className='cta-dialog__title'>Рассчитать стоимость</h2>
 						<p className='cta-dialog__subtitle'>
-							Оставьте контакты, и мы свяжемся с вами в ближайшее время
+							Оставьте заявку — получите расчёт стоимости вашего проекта.
 						</p>
 					</div>
 					<ContactsForm />

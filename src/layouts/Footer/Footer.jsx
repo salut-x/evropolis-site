@@ -70,15 +70,17 @@ const Footer = () => {
 					<p className='footer__copy'>© 2026 Все права защищены</p>
 					<div className='footer__legal'>
 						<Link
-							href='/privacy'
+							href='/policy.pdf'
 							label='Политика конфиденциальности'
 							variant='simple'
+							target='_blank'
 						/>
 						<span>|</span>
 						<Link
-							href='/terms'
+							href='/terms.pdf'
 							label='Пользовательское соглашение'
 							variant='simple'
+							target='_blank'
 						/>
 					</div>
 					<a
