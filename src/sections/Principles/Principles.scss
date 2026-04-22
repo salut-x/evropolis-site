@@ -12,11 +12,26 @@
 
   &__header {
     padding-bottom: 200px;
+    @include tablet {
+      padding-bottom: 40px;
+    }
+    @include mobile {
+      padding-bottom: 56px;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     row-gap: fluid(16,8);
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 8px;
+    }
+    @include mobile {
+      display: flex;
+    }
   }
 }

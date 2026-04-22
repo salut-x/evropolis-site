@@ -1,5 +1,4 @@
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export default class AboutAnimation {
 	init() {
@@ -26,7 +25,7 @@ export default class AboutAnimation {
 					scrollTrigger: {
 						trigger: '.about-company',
 						start: 'top bottom',
-						end: 'bottom top',
+						end: '50%',
 						scrub: true
 					}
 				}

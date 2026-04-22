@@ -1,6 +1,6 @@
 .button {
   @include flex-center(true);
-  padding: fluid-to-laptop(16, 12);
+  padding: fluid-to-laptop(16, 10) 16px;
   text-transform: uppercase;
   font-weight: 600;
   font-size: fluid(18,14);

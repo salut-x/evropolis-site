@@ -9,7 +9,7 @@ const images = [
 const TeamGallery = () => {
 	return (
 		<section className='team-gallery section'>
-			<div className='team-gallery__inner'>
+			<div className='team-gallery__inner container'>
 				<div
 					className='team-gallery__grid swiper'
 					data-js-team-gallery

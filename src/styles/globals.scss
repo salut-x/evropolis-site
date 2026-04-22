@@ -166,7 +166,11 @@ dialog {
 
     &--sticky {
       position: sticky;
-    top: 40px;
+      top: 40px;
+
+      @include tablet {
+        position: relative;
+      }
     }
   }
 

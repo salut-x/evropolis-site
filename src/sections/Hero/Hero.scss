@@ -4,6 +4,10 @@
   display: flex;
   overflow: hidden;
 
+  @include tablet {
+    min-height: 100svh;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -47,7 +51,9 @@
   }
 
   &__title {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
     max-width: fluid-to-laptop(904, 740);
     min-width: 0;
     flex-shrink: 1;
@@ -103,6 +109,7 @@
     display: grid;
     row-gap: fluid-to-laptop(24, 16);
     width: 100%;
+    max-width: 1920px;
     color: var(--color-light);
 
     &-content {

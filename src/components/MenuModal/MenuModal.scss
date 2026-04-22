@@ -50,13 +50,13 @@
     display: flex;
     flex-direction: column;
     row-gap: fluid(16, 12);
-    margin: fluid-to-laptop(32, 24);
+    margin: 40px fluid-to-laptop(32, 24);
     justify-content: start;
   }
 
   &__list {
     display: grid;
-    row-gap: fluid-to-laptop(16,8);
+    row-gap: 12px;
     justify-items: start; // ← или так
   }
 
@@ -71,10 +71,12 @@
   }
 
   &__link {
+    display: block;
     font-size: fluid(48, 24);
     color: var(--color-dark);
     line-height: 110%;
     letter-spacing: -0.04em;
+    padding-right: 40px;
 
 
     @include hover {
