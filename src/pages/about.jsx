@@ -5,6 +5,7 @@ import { History } from '@/sections/History'
 import Principles from '@/sections/Principles/Principles'
 import { Team } from '@/sections/Team'
 import { TeamGallery } from '@/sections/TeamGallery'
+import { VideoModal } from '@/components/VideoModal'
 
 export const metadata = {
 	title: 'О нас',
@@ -15,6 +16,7 @@ export default function () {
 	return (
 		<>
 			<AboutCompany />
+			<VideoModal />
 			<History />
 			<TeamGallery />
 			<Team />

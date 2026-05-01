@@ -69,6 +69,7 @@
 
   &__body {
     grid-column: 7 / span 5;
+    align-items: start;
     color: var(--color-light);
     display: flex;
     flex-direction: column;
